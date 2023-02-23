@@ -1,0 +1,12 @@
+/*
+How to Initilize React App
+1. Create a folder
+2. Open terminal and go to that folder
+3. Run command: npm init -y
+4. Run command: npm i -D parcel
+6. Run command : npm i react react-dom
+   Run command to install babel : npm install --save-dev @babel/preset-react
+   Run Command to Remove Console.log: npm install babel-plugin-transform-remove-console --save-dev
+7. Create a file index.html
+8. Run command: npx parcel build index.html
+*/
