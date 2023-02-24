@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <div className=" mx-auto text-center bg-slate-100 font-bold">
-      Copyright &copy; Bojan.com Reserved
+    <div className=" mx-auto text-center bg-slate-200 font-bold p-4">
+      Copyright &copy; Bojan.com | All Rights Reserved
     </div>
   );
 };

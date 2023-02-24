@@ -12,7 +12,7 @@ import Header from "./Components/Header.js";
 import Footer from "./Components/Footer.js";
 import Body from "./Components/Body.js";
 
-const SwiggyPage = () => {
+function SwiggyPage() {
   return (
     <>
       <Header />
@@ -20,7 +20,7 @@ const SwiggyPage = () => {
       <Footer />
     </>
   );
-};
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<SwiggyPage />);
