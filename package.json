@@ -1,5 +1,5 @@
 {
-  "name": "React",
+  "name": "react",
   "version": "1.0.0",
   "scripts": {
     "start": "parcel index.html",
@@ -8,7 +8,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@babel/preset-react": "^7.18.6",
     "babel-plugin-transform-remove-console": "^6.9.4",
@@ -20,5 +19,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "main": "App.js",
+  "description": ""
 }

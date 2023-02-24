@@ -8,9 +8,9 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./src/Header.js";
-import Footer from "./src/Footer.js";
-import Body from "./src/Body.js";
+import Header from "./Components/Header.js";
+import Footer from "./Components/Footer.js";
+import Body from "./Components/Body.js";
 
 const SwiggyPage = () => {
   return (
