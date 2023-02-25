@@ -14,24 +14,24 @@ const Body = () => {
 
   return (
     <>
-      <div className="flex justify-center my-5">
+      <div className="flex items-center justify-center my-5">
         <input
           type="text"
           name="search"
           value={searchText}
-          placeholder="Search For Food You Love..."
-          className="ring-1 ring-slate-900 p-2  focus:outline-none focus:shadow-lg w-[30%] focus:ring-1 focus:ring-slate-900"
+          placeholder="Search For Restaurant ..."
+          className="ring-1 ring-slate-900 p-2  focus:outline-none focus:shadow-lg w-[20%] focus:ring-1 focus:ring-slate-900 rounded-sm"
           onChange={(e) => setSearchText(e.target.value)}
         />
 
         <button
-          className=" bg-slate-900 text-white shadow-lg p-2 w-28 "
+          className=" bg-slate-900 text-white shadow-lg p-2 ml-3 rounded-sm w-28 hover:bg-slate-700 "
           onClick={() => {
             const data = filterData(searchText, restaurants);
             setRestaurants(data);
           }}
         >
-          Search
+          <i class="fa-solid fa-magnifying-glass mr-2"></i>Search
         </button>
       </div>
       <div className="flex flex-wrap justify-center xl:mx-10">

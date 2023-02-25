@@ -17,10 +17,10 @@ const Header = () => {
       
 
       <ul className="flex flex-col lg:flex-row absolute lg:relative justify-center h-72 lg:h-auto items-center cursor-pointer ">
-        <li className="p-5">Offers</li>
-        <li className="p-5">Help</li>
-        <li className="p-5">SignIn</li>
-        <li className="p-5">Cart</li>
+        <li className="p-5 hover:scale-105 duration-500">Offers</li>
+        <li className="p-5 hover:scale-105 duration-500"><i class="fa-solid fa-circle-info mr-2"></i>Help</li>
+        <li className="p-5 hover:scale-105 duration-500"><i class="fa-regular fa-user mr-2"></i>SignIn</li>
+        <li className="p-5 hover:scale-105 duration-500"><i class="fa-solid fa-cart-plus mr-2"></i>Cart</li>
       </ul>
     </div>
   );
