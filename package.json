@@ -20,6 +20,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "main": "App.js",
+  "default": "index.html",
   "description": ""
 }
