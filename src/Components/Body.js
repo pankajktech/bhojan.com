@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
 import RestaurantCard from "./RestaurantCard";
-import notFound from "./notFound.js";
+// import notFound from "./notFound.js";
 
 function filterData(searchText, allRestaurants) {
   return allRestaurants.filter((restaurant) =>
-    restaurant.data.name.toLowerCase().includes(searchText.toLowerCase())
+    restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase())
   );
 }
 
