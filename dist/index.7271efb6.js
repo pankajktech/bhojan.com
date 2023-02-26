@@ -27170,13 +27170,12 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _s = $RefreshSig$();
-const Validation = ()=>{
-    return verified;
+const authenticateUser = ()=>{
+    return false;
 };
-_c = Validation;
 const Header = ()=>{
     _s();
-    const [signin, setSignin] = (0, _react.useState)(false);
+    const [signedin, setSignedin] = (0, _react.useState)(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "bg-slate-900 bg-opacity-10 shadow-sm flex justify-between lg:justify-around items-center sticky top-0 z-10 p-3 backdrop-blur-md",
@@ -27246,7 +27245,21 @@ const Header = ()=>{
                                     lineNumber: 37,
                                     columnNumber: 13
                                 }, undefined),
-                                " Sign In"
+                                signedin ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    onClick: ()=>setSignedin(false),
+                                    children: "Sign Out"
+                                }, void 0, false, {
+                                    fileName: "src/Components/Header.js",
+                                    lineNumber: 39,
+                                    columnNumber: 15
+                                }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    onClick: ()=>setSignedin(true),
+                                    children: "Sign In"
+                                }, void 0, false, {
+                                    fileName: "src/Components/Header.js",
+                                    lineNumber: 41,
+                                    columnNumber: 15
+                                }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/Components/Header.js",
@@ -27267,12 +27280,11 @@ const Header = ()=>{
         }, undefined)
     }, void 0, false);
 };
-_s(Header, "zXBgA2C4E6kRFFkJCdY6vbOQ/v8=");
-_c1 = Header;
+_s(Header, "lND/H513ZXQ54aQuZ2arTlYVrRc=");
+_c = Header;
 exports.default = Header;
-var _c, _c1;
-$RefreshReg$(_c, "Validation");
-$RefreshReg$(_c1, "Header");
+var _c;
+$RefreshReg$(_c, "Header");
 
   $parcel$ReactRefreshHelpers$2257.postlude(module);
 } finally {
@@ -27533,7 +27545,8 @@ const Body = ()=>{
         setAllRestaurants(data?.data?.cards[2]?.data?.data?.cards);
         setFilteredRestaurants(data?.data?.cards[2]?.data?.data?.cards);
     }
-    if (filteredRestaurants.length === 0) return (0, _notFoundJsDefault.default)();
+    // if(!allRestaurants ===0) return null;
+    // if(filteredRestaurants.length===0) return notFound();
     return allRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
         fileName: "src/Components/Body.js",
         lineNumber: 34,
@@ -27628,29 +27641,20 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "min-h-screen flex justify-center items-center flex-col",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-5xl my-5",
-                children: "Loading Restaurants"
-            }, void 0, false, {
-                fileName: "src/Components/Shimmer.js",
-                lineNumber: 5,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-3xl",
-                children: "Please Wait "
-            }, void 0, false, {
-                fileName: "src/Components/Shimmer.js",
-                lineNumber: 6,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true, {
+        className: "flex flex-wrap justify-center items-center",
+        children: Array(8).fill(" ").map((e)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "bg-slate-400 m-10 w-72 h-96"
+                }, void 0, false, {
+                    fileName: "src/Components/Shimmer.js",
+                    lineNumber: 8,
+                    columnNumber: 13
+                }, undefined)
+            }, void 0, false))
+    }, void 0, false, {
         fileName: "src/Components/Shimmer.js",
-        lineNumber: 4,
-        columnNumber: 9
+        lineNumber: 3,
+        columnNumber: 5
     }, undefined);
 };
 _c = Shimmer;
@@ -27676,7 +27680,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _contents = require("../Contents");
 const RestaurantCard = ({ name , cuisines , avgRating , cloudinaryImageId , deliveryTime  })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "m-10 w-80 h-96 bg-white shadow-xl hover:scale-105 duration-500 cursor-pointer ",
+        className: "m-10 w-72 h-96 bg-white shadow-xl hover:scale-105 duration-500 cursor-pointer ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: (0, _contents.IMG_CDN_LINK) + cloudinaryImageId,
@@ -27713,7 +27717,7 @@ const RestaurantCard = ({ name , cuisines , avgRating , cloudinaryImageId , deli
                         className: "my-4",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "bg-green-600 ml-3 mr-14 px-2 text-sm text-white",
+                                className: "bg-green-600 ml-3 mr-6 px-2 text-sm text-white",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
                                         className: "fa-regular fa-star text-white fa-sm mr-1"

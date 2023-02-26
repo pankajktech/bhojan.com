@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-const Validation = () => {
-  return (verified)
+const authenticateUser = () => {
+  return false;
 };
 
 const Header = () => {
-  const [signin, setSignin] = useState(false);
+  const [signedin, setSignedin] = useState(false);
   return (
     <>
       <div className="bg-slate-900 bg-opacity-10 shadow-sm flex justify-between lg:justify-around items-center sticky top-0 z-10 p-3 backdrop-blur-md">
@@ -34,7 +34,12 @@ const Header = () => {
           </li>
 
           <li className=" text-md  hover:text-slate-500 duration-500">
-            <i className="mx-1 fa-regular fa-user text-slate-900"></i> Sign In
+            <i className="mx-1 fa-regular fa-user text-slate-900"></i>
+            {signedin ? (
+              <button onClick={() => setSignedin(false)}>Sign Out</button>
+            ) : (
+              <button onClick={() => setSignedin(true)}>Sign In</button>
+            )}
           </li>
         </ul>
       </div>

@@ -27,8 +27,8 @@ const Body = () => {
     setFilteredRestaurants(data?.data?.cards[2]?.data?.data?.cards);
   }
 
-  if(!allRestaurants ===0) return null;
-  if(filteredRestaurants.length===0) return notFound();
+  // if(!allRestaurants ===0) return null;
+  // if(filteredRestaurants.length===0) return notFound();
 
   return allRestaurants.length === 0 ? (
     <Shimmer />
