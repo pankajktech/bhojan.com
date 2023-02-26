@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
 import RestaurantCard from "./RestaurantCard";
+import notFound from "./notFound.js";
 
 function filterData(searchText, allRestaurants) {
   return allRestaurants.filter((restaurant) =>
@@ -26,6 +27,9 @@ const Body = () => {
     setFilteredRestaurants(data?.data?.cards[2]?.data?.data?.cards);
   }
 
+  if(!allRestaurants ===0) return null;
+  if(filteredRestaurants.length===0) return notFound();
+
   return allRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
@@ -35,8 +39,9 @@ const Body = () => {
           type="text"
           name="search"
           value={searchText}
+          autoFocus
           placeholder="Search For Restaurant ..."
-          className="outline-none ring-1 ring-slate-400 p-2 h-12 focus:outline-none focus:shadow-lg w-[20%] focus:ring-1 focus:ring-slate-900 rounded-sm"
+          className="ring-1 ring-slate-700 p-2 h-12 focus:outline-none focus:shadow-lg w-[45%] focus:ring-1 focus:ring-slate-900 rounded-sm"
           onChange={(e) => setSearchText(e.target.value)}
         />
 
@@ -51,7 +56,7 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="flex flex-wrap justify-center xl:mx-10">
+      <div className="flex flex-wrap justify-center xl:mx-10 min-h-[75vh]">
         {filteredRestaurants.map((restaurant) => {
           return (
             <RestaurantCard {...restaurant.data} key={restaurant.data.id} />

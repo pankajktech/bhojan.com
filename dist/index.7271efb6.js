@@ -143,8 +143,8 @@
     }
   }
 })({"1xC6H":[function(require,module,exports) {
-var Refresh = require("492dc738d77fb658");
-var ErrorOverlay = require("6c8492cee380d758");
+var Refresh = require("2160fb5d13785044");
+var ErrorOverlay = require("1c291a3bf361f60f");
 Refresh.injectIntoGlobalHook(window);
 window.$RefreshReg$ = function() {};
 window.$RefreshSig$ = function() {
@@ -163,11 +163,11 @@ window.addEventListener("parcelhmraccept", ()=>{
     ErrorOverlay.dismissRuntimeErrors();
 });
 
-},{"492dc738d77fb658":"786KC","6c8492cee380d758":"1dldy"}],"786KC":[function(require,module,exports) {
+},{"2160fb5d13785044":"786KC","1c291a3bf361f60f":"1dldy"}],"786KC":[function(require,module,exports) {
 "use strict";
-module.exports = require("764c792412b214a8");
+module.exports = require("92be75a8975d5283");
 
-},{"764c792412b214a8":"hdge7"}],"hdge7":[function(require,module,exports) {
+},{"92be75a8975d5283":"hdge7"}],"hdge7":[function(require,module,exports) {
 /** @license React v0.9.0
  * react-refresh-runtime.development.js
  *
@@ -628,7 +628,7 @@ module.exports = require("764c792412b214a8");
 })();
 
 },{}],"1dldy":[function(require,module,exports) {
-var process = require("d41f68950ddd192c");
+var process = require("7dda49983d56de7a");
 !function(e, t) {
     module.exports = t();
 }(window, function() {
@@ -2358,7 +2358,7 @@ var process = require("d41f68950ddd192c");
     ]);
 });
 
-},{"d41f68950ddd192c":"d5jf4"}],"d5jf4":[function(require,module,exports) {
+},{"7dda49983d56de7a":"d5jf4"}],"d5jf4":[function(require,module,exports) {
 // shim for using process in browser
 var process = module.exports = {};
 // cached from whatever global is present so that test runners that stub it
@@ -2974,9 +2974,9 @@ $RefreshReg$(_c, "SwiggyPage");
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./Components/Header.js":"fNIx6","./Components/Footer.js":"eUZ6J","./Components/Body.js":"6J35F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
-module.exports = require("d97fb8675f60a82");
+module.exports = require("63144f38253ee67c");
 
-},{"d97fb8675f60a82":"48uCM"}],"48uCM":[function(require,module,exports) {
+},{"63144f38253ee67c":"48uCM"}],"48uCM":[function(require,module,exports) {
 /**
  * @license React
  * react-jsx-dev-runtime.development.js
@@ -2988,7 +2988,7 @@ module.exports = require("d97fb8675f60a82");
  */ "use strict";
 (function() {
     "use strict";
-    var React = require("335138f5e1b1a87");
+    var React = require("ce11cf9647e424ea");
     // ATTENTION
     // When adding new symbols to this file,
     // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
@@ -3807,11 +3807,11 @@ module.exports = require("d97fb8675f60a82");
     exports.jsxDEV = jsxDEV$1;
 })();
 
-},{"335138f5e1b1a87":"21dqq"}],"21dqq":[function(require,module,exports) {
+},{"ce11cf9647e424ea":"21dqq"}],"21dqq":[function(require,module,exports) {
 "use strict";
-module.exports = require("d71e6cf588c4909b");
+module.exports = require("ea2182f4b49b5796");
 
-},{"d71e6cf588c4909b":"6YvXz"}],"6YvXz":[function(require,module,exports) {
+},{"ea2182f4b49b5796":"6YvXz"}],"6YvXz":[function(require,module,exports) {
 /**
  * @license React
  * react.development.js
@@ -5679,7 +5679,7 @@ module.exports = require("d71e6cf588c4909b");
 
 },{}],"lOjBx":[function(require,module,exports) {
 "use strict";
-var m = require("8273bbee042d9294");
+var m = require("980acbaffe935530");
 var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
 exports.createRoot = function(c, o) {
     i.usingClientEntryPoint = true;
@@ -5698,7 +5698,7 @@ exports.hydrateRoot = function(c, h, o) {
     }
 };
 
-},{"8273bbee042d9294":"j6uA9"}],"j6uA9":[function(require,module,exports) {
+},{"980acbaffe935530":"j6uA9"}],"j6uA9":[function(require,module,exports) {
 "use strict";
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") return;
@@ -5712,9 +5712,9 @@ function checkDCE() {
     // a false positive.
     throw new Error("^_^");
 }
-module.exports = require("9ecd9966be576c83");
+module.exports = require("b9e6be23c9246543");
 
-},{"9ecd9966be576c83":"3iA9v"}],"3iA9v":[function(require,module,exports) {
+},{"b9e6be23c9246543":"3iA9v"}],"3iA9v":[function(require,module,exports) {
 /**
  * @license React
  * react-dom.development.js
@@ -5727,8 +5727,8 @@ module.exports = require("9ecd9966be576c83");
 (function() {
     "use strict";
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
-    var React = require("983ea08f5118c1ac");
-    var Scheduler = require("3b74399a829a25da");
+    var React = require("12c7c01cf4ffd19");
+    var Scheduler = require("12629f98cd830000");
     var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
     var suppressWarning = false;
     function setSuppressWarning(newSuppressWarning) {
@@ -26699,11 +26699,11 @@ module.exports = require("9ecd9966be576c83");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{"983ea08f5118c1ac":"21dqq","3b74399a829a25da":"juvHo"}],"juvHo":[function(require,module,exports) {
+},{"12c7c01cf4ffd19":"21dqq","12629f98cd830000":"juvHo"}],"juvHo":[function(require,module,exports) {
 "use strict";
-module.exports = require("76fc087af26ad94a");
+module.exports = require("8fb88d050acc89c8");
 
-},{"76fc087af26ad94a":"RqdIf"}],"RqdIf":[function(require,module,exports) {
+},{"8fb88d050acc89c8":"RqdIf"}],"RqdIf":[function(require,module,exports) {
 /**
  * @license React
  * scheduler.development.js
@@ -27169,10 +27169,17 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+const Validation = ()=>{
+    return verified;
+};
+_c = Validation;
 const Header = ()=>{
+    _s();
+    const [signin, setSignin] = (0, _react.useState)(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "bg-slate-900 bg-opacity-10 shadow-sm flex justify-around items-center font-bold sticky top-0 z-10 p-3 backdrop-blur-md",
+            className: "bg-slate-900 bg-opacity-10 shadow-sm flex justify-between lg:justify-around items-center sticky top-0 z-10 p-3 backdrop-blur-md",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "flex flex-row justify-center items-center",
@@ -27186,78 +27193,86 @@ const Header = ()=>{
                                     className: "h-12 w-12 mr-2"
                                 }, void 0, false, {
                                     fileName: "src/Components/Header.js",
-                                    lineNumber: 12,
+                                    lineNumber: 16,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 10,
+                            lineNumber: 14,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                            className: "text-lg",
+                            className: " text-md lg:text-lg",
                             children: "Bhojan.com"
                         }, void 0, false, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 17,
+                            lineNumber: 21,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Header.js",
-                    lineNumber: 9,
+                    lineNumber: 13,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                    className: "flex flex-col lg:flex-row absolute lg:relative justify-center h-72 lg:h-auto items-center cursor-pointer ",
+                    className: "cursor-pointer flex ",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "mx-6 hover:scale-105 text-2xl hover:text-teal-800 duration-500",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                className: "fa-solid fa-cart-plus text-slate-900"
-                            }, void 0, false, {
-                                fileName: "src/Components/Header.js",
-                                lineNumber: 29,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
+                            className: "mx-4 lg:mx-8 text-md hover:text-slate-500 duration-500",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                    className: "mx-1 fa-solid fa-cart-plus text-slate-900"
+                                }, void 0, false, {
+                                    fileName: "src/Components/Header.js",
+                                    lineNumber: 33,
+                                    columnNumber: 13
+                                }, undefined),
+                                " Cart"
+                            ]
+                        }, void 0, true, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 28,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "hover:scale-105 text-2xl hover:text-teal-800 duration-500",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                className: "mx-6 fa-regular fa-user text-slate-900"
-                            }, void 0, false, {
-                                fileName: "src/Components/Header.js",
-                                lineNumber: 32,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
+                            className: " text-md hover:text-slate-500 duration-500",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                    className: "mx-1 fa-regular fa-user text-slate-900"
+                                }, void 0, false, {
+                                    fileName: "src/Components/Header.js",
+                                    lineNumber: 37,
+                                    columnNumber: 13
+                                }, undefined),
+                                " Sign In"
+                            ]
+                        }, void 0, true, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 31,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Header.js",
-                    lineNumber: 20,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/Components/Header.js",
-            lineNumber: 8,
+            lineNumber: 12,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
 };
-_c = Header;
+_s(Header, "zXBgA2C4E6kRFFkJCdY6vbOQ/v8=");
+_c1 = Header;
 exports.default = Header;
-var _c;
-$RefreshReg$(_c, "Header");
+var _c, _c1;
+$RefreshReg$(_c, "Validation");
+$RefreshReg$(_c1, "Header");
 
   $parcel$ReactRefreshHelpers$2257.postlude(module);
 } finally {
@@ -27296,7 +27311,7 @@ exports.export = function(dest, destName, get) {
 
 },{}],"km3Ru":[function(require,module,exports) {
 "use strict";
-var Refresh = require("1e4de6d0263126e5");
+var Refresh = require("848749f5416ae40");
 function debounce(func, delay) {
     {
         let timeout = undefined;
@@ -27427,7 +27442,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"1e4de6d0263126e5":"786KC"}],"eUZ6J":[function(require,module,exports) {
+},{"848749f5416ae40":"786KC"}],"eUZ6J":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$fbbd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27497,6 +27512,8 @@ var _shimmerJs = require("./Shimmer.js");
 var _shimmerJsDefault = parcelHelpers.interopDefault(_shimmerJs);
 var _restaurantCard = require("./RestaurantCard");
 var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
+var _notFoundJs = require("./notFound.js");
+var _notFoundJsDefault = parcelHelpers.interopDefault(_notFoundJs);
 var _s = $RefreshSig$();
 function filterData(searchText, allRestaurants) {
     return allRestaurants.filter((restaurant)=>restaurant.data.name.toLowerCase().includes(searchText.toLowerCase()));
@@ -27516,9 +27533,10 @@ const Body = ()=>{
         setAllRestaurants(data?.data?.cards[2]?.data?.data?.cards);
         setFilteredRestaurants(data?.data?.cards[2]?.data?.data?.cards);
     }
+    if (filteredRestaurants.length === 0) return (0, _notFoundJsDefault.default)();
     return allRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
         fileName: "src/Components/Body.js",
-        lineNumber: 30,
+        lineNumber: 34,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -27529,12 +27547,13 @@ const Body = ()=>{
                         type: "text",
                         name: "search",
                         value: searchText,
+                        autoFocus: true,
                         placeholder: "Search For Restaurant ...",
-                        className: "outline-none ring-1 ring-slate-400 p-2 h-12 focus:outline-none focus:shadow-lg w-[20%] focus:ring-1 focus:ring-slate-900 rounded-sm",
+                        className: "ring-1 ring-slate-700 p-2 h-12 focus:outline-none focus:shadow-lg w-[45%] focus:ring-1 focus:ring-slate-900 rounded-sm",
                         onChange: (e)=>setSearchText(e.target.value)
                     }, void 0, false, {
                         fileName: "src/Components/Body.js",
-                        lineNumber: 34,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27548,31 +27567,31 @@ const Body = ()=>{
                                 className: "fa-solid fa-magnifying-glass mr-2"
                             }, void 0, false, {
                                 fileName: "src/Components/Body.js",
-                                lineNumber: 50,
+                                lineNumber: 55,
                                 columnNumber: 11
                             }, undefined),
                             "Search"
                         ]
                     }, void 0, true, {
                         fileName: "src/Components/Body.js",
-                        lineNumber: 43,
+                        lineNumber: 48,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Body.js",
-                lineNumber: 33,
+                lineNumber: 37,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-wrap justify-center xl:mx-10",
+                className: "flex flex-wrap justify-center xl:mx-10 min-h-[75vh]",
                 children: filteredRestaurants.map((restaurant)=>{
                     return /*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
                         ...restaurant.data,
                         key: restaurant.data.id,
                         __source: {
                             fileName: "src/Components/Body.js",
-                            lineNumber: 57,
+                            lineNumber: 62,
                             columnNumber: 13
                         },
                         __self: undefined
@@ -27580,7 +27599,7 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/Components/Body.js",
-                lineNumber: 54,
+                lineNumber: 59,
                 columnNumber: 7
             }, undefined)
         ]
@@ -27597,7 +27616,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Shimmer.js":"c7s09","./RestaurantCard":"kZnAN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"c7s09":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Shimmer.js":"c7s09","./RestaurantCard":"kZnAN","./notFound.js":"3drEq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"c7s09":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5bd8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -29255,6 +29274,42 @@ const RestaurantList = [
     }
 ];
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1xC6H","cJcMZ","2kQhy"], "2kQhy", "parcelRequire77dd")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3drEq":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f11b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f11b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const notFound = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        className: "min-h-screen flex justify-center items-center text-3xl font-bold text-blue-700",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                class: "fa-regular fa-face-meh-blank fa-3xl mr-3"
+            }, void 0, false, {
+                fileName: "src/Components/notFound.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, undefined),
+            "Restaurant Not Found!!"
+        ]
+    }, void 0, true, {
+        fileName: "src/Components/notFound.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+exports.default = notFound;
+
+  $parcel$ReactRefreshHelpers$f11b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","cJcMZ","2kQhy"], "2kQhy", "parcelRequire77dd")
 
 //# sourceMappingURL=index.7271efb6.js.map
