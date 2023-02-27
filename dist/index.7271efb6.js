@@ -2941,22 +2941,26 @@ var _aboutJs = require("./Components/About.js");
 var _aboutJsDefault = parcelHelpers.interopDefault(_aboutJs);
 var _errorJs = require("./Components/Error.js");
 var _errorJsDefault = parcelHelpers.interopDefault(_errorJs);
+var _contactJs = require("./Components/Contact.js");
+var _contactJsDefault = parcelHelpers.interopDefault(_contactJs);
+var _signinJs = require("./Components/Signin.js");
+var _signinJsDefault = parcelHelpers.interopDefault(_signinJs);
 function SwiggyPage() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerJsDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 13,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyJsDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 14,
+                lineNumber: 16,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerJsDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 15,
+                lineNumber: 17,
                 columnNumber: 7
             }, this)
         ]
@@ -2968,34 +2972,56 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SwiggyPage, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 23,
+            lineNumber: 25,
             columnNumber: 14
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorJsDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 24,
+            lineNumber: 26,
             columnNumber: 19
-        }, undefined)
-    },
-    {
-        path: "/Aboutme",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutJsDefault.default), {}, void 0, false, {
-            fileName: "src/App.js",
-            lineNumber: 28,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/Login",
-        element: "<LoginPage/>"
+        }, undefined),
+        children: [
+            {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyJsDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 30,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/Aboutme",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutJsDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 34,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/Contact",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactJsDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 39,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/Signin",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _signinJsDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 43,
+                    columnNumber: 18
+                }, undefined)
+            }
+        ]
     }
 ]);
 (0, _clientDefault.default).createRoot(document.getElementById("root")).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterProvider), {
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 36,
-    columnNumber: 61
+    lineNumber: 50,
+    columnNumber: 3
 }, undefined));
 var _c;
 $RefreshReg$(_c, "SwiggyPage");
@@ -3005,7 +3031,7 @@ $RefreshReg$(_c, "SwiggyPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./Components/Header.js":"fNIx6","./Components/Footer.js":"eUZ6J","./Components/Body.js":"6J35F","react-router-dom":"9xmpe","./Components/About.js":"19tXb","./Components/Error.js":"iQH4s","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./Components/Header.js":"fNIx6","./Components/Footer.js":"eUZ6J","./Components/Body.js":"6J35F","react-router-dom":"9xmpe","./Components/About.js":"19tXb","./Components/Error.js":"iQH4s","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Components/Contact.js":"66EYZ","./Components/Signin.js":"am7uj"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("63144f38253ee67c");
 
@@ -27202,10 +27228,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
-const authenticateUser = ()=>{
-    return false;
-};
 const Header = ()=>{
     _s();
     const [signedin, setSignedin] = (0, _react.useState)(false);
@@ -27216,8 +27240,8 @@ const Header = ()=>{
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "flex flex-row justify-center items-center",
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            href: "#",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            href: "/",
                             children: [
                                 " ",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -27225,13 +27249,13 @@ const Header = ()=>{
                                     className: "h-12 w-12 mr-2"
                                 }, void 0, false, {
                                     fileName: "src/Components/Header.js",
-                                    lineNumber: 16,
+                                    lineNumber: 13,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 14,
+                            lineNumber: 11,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -27239,91 +27263,102 @@ const Header = ()=>{
                             children: "Bhojan.com"
                         }, void 0, false, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 21,
+                            lineNumber: 18,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Header.js",
-                    lineNumber: 13,
+                    lineNumber: 10,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                     className: "cursor-pointer flex ",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "mx-2 lg:mx-8 text-md hover:text-slate-500 duration-500",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                href: "/Aboutme",
-                                children: "About Me"
+                            className: "mx-2 lg:mx-4 text-md hover:animate-pulse hover:text-slate-800 font-bold duration-500",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/",
+                                children: "Home"
                             }, void 0, false, {
                                 fileName: "src/Components/Header.js",
-                                lineNumber: 27,
+                                lineNumber: 23,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 26,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "mx-4 lg:mx-8 text-md hover:text-slate-500 duration-500",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    className: "mx-1 fa-solid fa-cart-plus text-slate-900"
-                                }, void 0, false, {
-                                    fileName: "src/Components/Header.js",
-                                    lineNumber: 30,
-                                    columnNumber: 13
-                                }, undefined),
-                                " Cart"
-                            ]
-                        }, void 0, true, {
+                            className: "mx-2 lg:mx-4 text-md hover:animate-pulse hover:text-slate-800 font-bold duration-500",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/Aboutme",
+                                children: "About Me"
+                            }, void 0, false, {
+                                fileName: "src/Components/Header.js",
+                                lineNumber: 26,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 29,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: " text-md hover:text-slate-500 duration-500",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    className: "mx-1 fa-regular fa-user text-slate-900"
-                                }, void 0, false, {
-                                    fileName: "src/Components/Header.js",
-                                    lineNumber: 34,
-                                    columnNumber: 13
-                                }, undefined),
-                                signedin ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    onClick: ()=>setSignedin(false),
-                                    children: "Sign Out"
-                                }, void 0, false, {
-                                    fileName: "src/Components/Header.js",
-                                    lineNumber: 36,
-                                    columnNumber: 15
-                                }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    onClick: ()=>setSignedin(true),
-                                    children: "Sign In"
+                            className: "mx-2 lg:mx-4 text-md hover:animate-pulse hover:text-slate-800 font-bold duration-500",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/Contact",
+                                children: "Contact"
+                            }, void 0, false, {
+                                fileName: "src/Components/Header.js",
+                                lineNumber: 29,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/Components/Header.js",
+                            lineNumber: 28,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "mx-4 text-md hover:animate-pulse hover:text-slate-800 font-bold duration-500",
+                            children: signedin ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: ()=>setSignedin(false),
+                                children: "Sign Out"
+                            }, void 0, false, {
+                                fileName: "src/Components/Header.js",
+                                lineNumber: 35,
+                                columnNumber: 15
+                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: ()=>setSignedin(true),
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                    to: "/Signin",
+                                    children: "Sign In "
                                 }, void 0, false, {
                                     fileName: "src/Components/Header.js",
                                     lineNumber: 38,
-                                    columnNumber: 15
+                                    columnNumber: 17
                                 }, undefined)
-                            ]
-                        }, void 0, true, {
+                            }, void 0, false, {
+                                fileName: "src/Components/Header.js",
+                                lineNumber: 37,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 33,
+                            lineNumber: 31,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Header.js",
-                    lineNumber: 24,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/Components/Header.js",
-            lineNumber: 12,
+            lineNumber: 9,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
@@ -27339,1993 +27374,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("848749f5416ae40");
-function debounce(func, delay) {
-    {
-        let timeout = undefined;
-        let lastTime = 0;
-        return function(args) {
-            // Call immediately if last call was more than the delay ago.
-            // Otherwise, set a timeout. This means the first call is fast
-            // (for the common case of a single update), and subsequent updates
-            // are batched.
-            let now = Date.now();
-            if (now - lastTime > delay) {
-                lastTime = now;
-                func.call(null, args);
-            } else {
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = undefined;
-                    lastTime = Date.now();
-                    func.call(null, args);
-                }, delay);
-            }
-        };
-    }
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30); // Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports; // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-} // When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        Refresh.register(exportValue, id + " %exports% " + key);
-    }
-}
-
-},{"848749f5416ae40":"786KC"}],"eUZ6J":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$fbbd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$fbbd.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " mx-auto text-center bg-slate-200 font-bold p-4 mt-auto mb-0",
-        children: [
-            "Copyright \xa9 Bojan.com | Made in",
-            " ",
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                className: "fa-solid fa-heart text-red-600 text-xl"
-            }, void 0, false, {
-                fileName: "src/Components/Footer.js",
-                lineNumber: 5,
-                columnNumber: 7
-            }, undefined),
-            " By",
-            " ",
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                href: "https://pankajktech.me",
-                className: "text-lg text-teal-600",
-                target: "_blank",
-                children: [
-                    "Pankaj Kumar",
-                    " "
-                ]
-            }, void 0, true, {
-                fileName: "src/Components/Footer.js",
-                lineNumber: 6,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/Components/Footer.js",
-        lineNumber: 3,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Footer;
-exports.default = Footer;
-var _c;
-$RefreshReg$(_c, "Footer");
-
-  $parcel$ReactRefreshHelpers$fbbd.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6J35F":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4f14 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4f14.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _shimmerJs = require("./Shimmer.js");
-var _shimmerJsDefault = parcelHelpers.interopDefault(_shimmerJs);
-var _restaurantCard = require("./RestaurantCard");
-var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
-var _s = $RefreshSig$();
-// import notFound from "./notFound.js";
-function filterData(searchText, allRestaurants) {
-    return allRestaurants.filter((restaurant)=>restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase()));
-}
-const Body = ()=>{
-    _s();
-    const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
-    const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]);
-    const [searchText, setSearchText] = (0, _react.useState)("");
-    (0, _react.useEffect)(()=>{
-        fetchRestaurants();
-    }, []);
-    async function fetchRestaurants() {
-        const API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&page_type=DESKTOP_WEB_LISTING";
-        const response = await fetch(API_URL);
-        const data = await response.json();
-        setAllRestaurants(data?.data?.cards[2]?.data?.data?.cards);
-        setFilteredRestaurants(data?.data?.cards[2]?.data?.data?.cards);
-    }
-    // if(!allRestaurants ===0) return null;
-    // if(filteredRestaurants.length===0) return notFound();
-    return allRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
-        fileName: "src/Components/Body.js",
-        lineNumber: 34,
-        columnNumber: 5
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex items-center justify-center my-5",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        name: "search",
-                        value: searchText,
-                        autoFocus: true,
-                        placeholder: "Search For Restaurant ...",
-                        className: "ring-1 ring-slate-700 p-2 h-12 focus:outline-none focus:shadow-lg w-[45%] focus:ring-1 focus:ring-slate-900 rounded-sm",
-                        onChange: (e)=>setSearchText(e.target.value)
-                    }, void 0, false, {
-                        fileName: "src/Components/Body.js",
-                        lineNumber: 38,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: " bg-slate-900 text-white shadow-lg p-2 h-12 rounded-sm w-28 hover:bg-slate-700 ",
-                        onClick: ()=>{
-                            const data = filterData(searchText, allRestaurants);
-                            setFilteredRestaurants(data);
-                        },
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                className: "fa-solid fa-magnifying-glass mr-2"
-                            }, void 0, false, {
-                                fileName: "src/Components/Body.js",
-                                lineNumber: 55,
-                                columnNumber: 11
-                            }, undefined),
-                            "Search"
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/Components/Body.js",
-                        lineNumber: 48,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/Components/Body.js",
-                lineNumber: 37,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-wrap justify-center xl:mx-10 min-h-[75vh]",
-                children: filteredRestaurants.map((restaurant)=>{
-                    return /*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
-                        ...restaurant.data,
-                        key: restaurant.data.id,
-                        __source: {
-                            fileName: "src/Components/Body.js",
-                            lineNumber: 62,
-                            columnNumber: 13
-                        },
-                        __self: undefined
-                    });
-                })
-            }, void 0, false, {
-                fileName: "src/Components/Body.js",
-                lineNumber: 59,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_s(Body, "7qBCbMasD3wgFZOaohLYrNPvx0s=");
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$4f14.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Shimmer.js":"c7s09","./RestaurantCard":"kZnAN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"c7s09":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5bd8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5bd8.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Shimmer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex flex-wrap justify-center items-center",
-        children: Array(8).fill(" ").map(()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "bg-slate-300 m-10 w-72 h-96 animate-pulse"
-                }, void 0, false, {
-                    fileName: "src/Components/Shimmer.js",
-                    lineNumber: 8,
-                    columnNumber: 13
-                }, undefined)
-            }, void 0, false))
-    }, void 0, false, {
-        fileName: "src/Components/Shimmer.js",
-        lineNumber: 3,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Shimmer;
-exports.default = Shimmer;
-var _c;
-$RefreshReg$(_c, "Shimmer");
-
-  $parcel$ReactRefreshHelpers$5bd8.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kZnAN":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bb0d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bb0d.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _contents = require("../Contents");
-const RestaurantCard = ({ name , cuisines , avgRating , cloudinaryImageId , deliveryTime  })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "m-10 w-72 h-96 bg-white shadow-xl hover:scale-105 duration-500 cursor-pointer ",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _contents.IMG_CDN_LINK) + cloudinaryImageId,
-                className: "w-80 h-52 mb-2"
-            }, void 0, false, {
-                fileName: "src/Components/RestaurantCard.js",
-                lineNumber: 12,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-3",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-xl text-sky-800 font-bold",
-                        children: [
-                            " ",
-                            name,
-                            " "
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/Components/RestaurantCard.js",
-                        lineNumber: 14,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: "my-2 text-sm",
-                        children: cuisines.join(",")
-                    }, void 0, false, {
-                        fileName: "src/Components/RestaurantCard.js",
-                        lineNumber: 15,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "my-4",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "bg-green-600 ml-3 mr-6 px-2 text-sm text-white",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        className: "fa-regular fa-star text-white fa-sm mr-1"
-                                    }, void 0, false, {
-                                        fileName: "src/Components/RestaurantCard.js",
-                                        lineNumber: 18,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    avgRating
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/Components/RestaurantCard.js",
-                                lineNumber: 17,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "",
-                                children: [
-                                    deliveryTime,
-                                    "min Delivery Time"
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/Components/RestaurantCard.js",
-                                lineNumber: 21,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/Components/RestaurantCard.js",
-                        lineNumber: 16,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/Components/RestaurantCard.js",
-                lineNumber: 13,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/Components/RestaurantCard.js",
-        lineNumber: 11,
-        columnNumber: 5
-    }, undefined);
-};
-_c = RestaurantCard;
-exports.default = RestaurantCard;
-var _c;
-$RefreshReg$(_c, "RestaurantCard");
-
-  $parcel$ReactRefreshHelpers$bb0d.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../Contents":"de8bC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"de8bC":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "IMG_CDN_LINK", ()=>IMG_CDN_LINK);
-parcelHelpers.export(exports, "RestaurantList", ()=>RestaurantList);
-const IMG_CDN_LINK = "https://res.cloudinary.com/swiggy/image/upload/";
-const RestaurantList = [
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "256941",
-            name: "Cha Vala Cafe",
-            uuid: "8bde5bbc-7738-454b-b1b9-877327d28d88",
-            city: "60",
-            area: "Race Course Road",
-            totalRatingsString: "100+ ratings",
-            cloudinaryImageId: "xkhqg1ctmqtlm2omlpte",
-            cuisines: [
-                "Snacks",
-                "Beverages"
-            ],
-            tags: [],
-            costForTwo: 10000,
-            costForTwoString: "₹100 FOR TWO",
-            deliveryTime: 22,
-            minDeliveryTime: 22,
-            maxDeliveryTime: 22,
-            slaString: "22 MINS",
-            lastMileTravel: 2.299999952316284,
-            slugs: {
-                restaurant: "cha-vala-cafe-race-course-road-race-course-road",
-                city: "rajkot"
-            },
-            cityState: "60",
-            address: "shop no.5, Avishkar Appartment, Nr Big Bite, Race course ring road, Rajkot",
-            locality: "Avishkar Appartment, Race Course Ring Road",
-            parentId: 20014,
-            unserviceable: false,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "FREE DELIVERY",
-                shortDescriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "",
-                shortDescriptionList: [
-                    {
-                        meta: "Free Delivery",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            ribbon: [
-                {
-                    type: "PROMOTED"
-                }
-            ],
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "cid=5930912~p=10~eid=00000186-86bb-85aa-313d-3d6900860a43",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "2.2 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "256941",
-                deliveryTime: 22,
-                minDeliveryTime: 22,
-                maxDeliveryTime: 22,
-                lastMileTravel: 2.299999952316284,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: true,
-            avgRating: "4.3",
-            totalRatings: 100,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "86658",
-            name: "Joker Gathiya",
-            uuid: "b4ac1433-cc81-4969-936f-4ed95a0bec7f",
-            city: "60",
-            area: "Limbda Chowk",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "cn17nlksgfwb8fltmxku",
-            cuisines: [
-                "Desserts"
-            ],
-            tags: [],
-            costForTwo: 10000,
-            costForTwoString: "₹100 FOR TWO",
-            deliveryTime: 15,
-            minDeliveryTime: 15,
-            maxDeliveryTime: 15,
-            slaString: "15 MINS",
-            lastMileTravel: 1.100000023841858,
-            slugs: {
-                restaurant: "joker-gathiya-jawahar-road-race-course-road",
-                city: "rajkot"
-            },
-            cityState: "60",
-            address: "Opp Rasikbhai Chevda wala, beside hotel comfort Inn, Limda Chowk, Rajkot.",
-            locality: "Limbda Chowk",
-            parentId: 111408,
-            unserviceable: false,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "FREE DELIVERY",
-                shortDescriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "",
-                shortDescriptionList: [
-                    {
-                        meta: "Free Delivery",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.1 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "86658",
-                deliveryTime: 15,
-                minDeliveryTime: 15,
-                maxDeliveryTime: 15,
-                lastMileTravel: 1.100000023841858,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.0",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "84290",
-            name: "Chatkazz",
-            uuid: "0c38af35-ef99-48de-919a-7679f5d4e53c",
-            city: "60",
-            area: "Limda Chowk",
-            totalRatingsString: "5000+ ratings",
-            cloudinaryImageId: "Swiggy-Dash/juejh1ph1onenswanqzq",
-            cuisines: [
-                "Chinese",
-                "North Indian",
-                "Burgers",
-                "Pizzas",
-                "Biryani"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 23,
-            minDeliveryTime: 23,
-            maxDeliveryTime: 23,
-            slaString: "23 MINS",
-            lastMileTravel: 1.100000023841858,
-            slugs: {
-                restaurant: "chatkazz-arya-nagar-race-course-road",
-                city: "rajkot"
-            },
-            cityState: "60",
-            address: "Limda Chowk, Trikon Baug, Panchnath Plot, Arya Nagar, Rajkot",
-            locality: "Trikon Baug",
-            parentId: 6343,
-            unserviceable: false,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "10% off",
-                shortDescriptionList: [
-                    {
-                        meta: "10% off | Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "10% off up to ₹40 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "10% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "10% off up to ₹40 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.1 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "84290",
-                deliveryTime: 23,
-                minDeliveryTime: 23,
-                maxDeliveryTime: 23,
-                lastMileTravel: 1.100000023841858,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.7",
-            totalRatings: 5000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "223930",
-            name: "Sangam Variety",
-            uuid: "dd09d80c-f362-44a3-91c4-0bb8c8431a06",
-            city: "60",
-            area: "Sadar Bazar",
-            totalRatingsString: "20+ ratings",
-            cloudinaryImageId: "yzgkkerzdz547jjahlqa",
-            cuisines: [
-                "Sweets"
-            ],
-            tags: [],
-            costForTwo: 30000,
-            costForTwoString: "₹300 FOR TWO",
-            deliveryTime: 17,
-            minDeliveryTime: 17,
-            maxDeliveryTime: 17,
-            slaString: "17 MINS",
-            lastMileTravel: 0.8999999761581421,
-            slugs: {
-                restaurant: "sangam-chikki-race-course-road-race-course-road",
-                city: "rajkot"
-            },
-            cityState: "60",
-            address: "Sangam Chikki, Sadar Bazar, Sadar, Rajkot",
-            locality: "Sadar",
-            parentId: 177175,
-            unserviceable: false,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "FREE DELIVERY",
-                shortDescriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "",
-                shortDescriptionList: [
-                    {
-                        meta: "Free Delivery",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "FREE DELIVERY",
-                        discountType: "FREE_DELIVERY",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "0.8 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "223930",
-                deliveryTime: 17,
-                minDeliveryTime: 17,
-                maxDeliveryTime: 17,
-                lastMileTravel: 0.8999999761581421,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.7",
-            totalRatings: 20,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "167232",
-            name: "Amrut Sweet Namkeen & Dairy Farm",
-            uuid: "d207677f-bc55-4c64-9c21-29e7eaddf159",
-            city: "60",
-            area: "Junction Plot",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "cm9th19uzfjhiuw3mkem",
-            cuisines: [
-                "Sweets",
-                "Snacks"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 16,
-            minDeliveryTime: 16,
-            maxDeliveryTime: 16,
-            slaString: "16 MINS",
-            lastMileTravel: 1.100000023841858,
-            slugs: {
-                restaurant: "amrut-sweet-and-namkeen-station-marg-race-course-road",
-                city: "rajkot"
-            },
-            cityState: "60",
-            address: "Amrut Sweet and Namkeen, Near Rajkot Railway Station, Station Marg, Rajkot.",
-            locality: "Station Marg",
-            parentId: 32275,
-            unserviceable: false,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "50% off",
-                shortDescriptionList: [
-                    {
-                        meta: "50% off | Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "50% off up to ₹100 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "50% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "50% off up to ₹100 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.1 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "167232",
-                deliveryTime: 16,
-                minDeliveryTime: 16,
-                maxDeliveryTime: 16,
-                lastMileTravel: 1.100000023841858,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.1",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "85860",
-            name: "Sargam Food",
-            uuid: "e357c369-dac0-4a38-ba19-bf3a5495dfe7",
-            city: "60",
-            area: "Junction Plot",
-            totalRatingsString: "10000+ ratings",
-            cloudinaryImageId: "bqgtntm79sjwhd5kdajl",
-            cuisines: [
-                "Chinese",
-                "North Indian",
-                "South Indian",
-                "Burgers",
-                "Pizzas",
-                "Biryani"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 12,
-            minDeliveryTime: 12,
-            maxDeliveryTime: 12,
-            slaString: "12 MINS",
-            lastMileTravel: 0.6000000238418579,
-            slugs: {
-                restaurant: "sargam-food-junction-plot-race-course-road",
-                city: "rajkot"
-            },
-            cityState: "60",
-            address: "Ground floor, Bilkha plaza, Kasturba road, opp. mohanbhai hall, Rajkot",
-            locality: "Junction Plot",
-            parentId: 178390,
-            unserviceable: false,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "60% off",
-                shortDescriptionList: [
-                    {
-                        meta: "60% off | Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "60% off up to ₹120 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "60% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "60% off up to ₹120 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "0.6 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "85860",
-                deliveryTime: 12,
-                minDeliveryTime: 12,
-                maxDeliveryTime: 12,
-                lastMileTravel: 0.6000000238418579,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.2",
-            totalRatings: 10000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "214923",
-            name: "Iqbal Restaurant",
-            uuid: "eb2e4785-b779-4ede-93b5-6c94a9cc26fe",
-            city: "60",
-            area: "Lakhajiraj Road",
-            totalRatingsString: "5000+ ratings",
-            cloudinaryImageId: "umnt1isog8xq57hijqek",
-            cuisines: [
-                "North Indian",
-                "Biryani",
-                "Mughlai",
-                "Pizzas"
-            ],
-            tags: [],
-            costForTwo: 25000,
-            costForTwoString: "₹250 FOR TWO",
-            deliveryTime: 14,
-            minDeliveryTime: 14,
-            maxDeliveryTime: 14,
-            slaString: "14 MINS",
-            lastMileTravel: 1.100000023841858,
-            slugs: {
-                restaurant: "iqbal-food-parcel-race-course-road-race-course-road",
-                city: "rajkot"
-            },
-            cityState: "60",
-            address: "Iqbal Non Veg Restaurant, Sir Lakhajiraj Road, Bangdi Bazar, Lohana Para, Rajkot, Gujarat, India",
-            locality: "Lakhaji Raj Road",
-            parentId: 107307,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "10% off",
-                shortDescriptionList: [
-                    {
-                        meta: "10% off | Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "10% off up to ₹40 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "10% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "10% off up to ₹40 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.1 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "214923",
-                deliveryTime: 14,
-                minDeliveryTime: 14,
-                maxDeliveryTime: 14,
-                lastMileTravel: 1.100000023841858,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.3",
-            totalRatings: 5000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "85692",
-            name: "The Grand Thakar - TGT",
-            uuid: "1570e79f-5ae8-4e8a-bf5d-19d9d7e966fa",
-            city: "60",
-            area: "Jubeli Chowk",
-            totalRatingsString: "10000+ ratings",
-            cloudinaryImageId: "aqjtcoxwuvbcnykea5ci",
-            cuisines: [
-                "Gujarati",
-                "Punjabi",
-                "North Indian",
-                "Chinese",
-                "Continental",
-                "Pizzas",
-                "Biryani"
-            ],
-            tags: [],
-            costForTwo: 30000,
-            costForTwoString: "₹300 FOR TWO",
-            deliveryTime: 22,
-            minDeliveryTime: 22,
-            maxDeliveryTime: 22,
-            slaString: "22 MINS",
-            lastMileTravel: 0.30000001192092896,
-            slugs: {
-                restaurant: "the-grand-thakar-kothi-compound-race-course-road",
-                city: "rajkot"
-            },
-            cityState: "60",
-            address: "Near Jubilee Garden, Kothi Compound, Rajkot",
-            locality: "Jawahar Road",
-            parentId: 257532,
-            unserviceable: false,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "10% off",
-                shortDescriptionList: [
-                    {
-                        meta: "10% off | Use PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "10% off | Use code PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "10% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "10% off | Use code PARTY",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "0.3 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "85692",
-                deliveryTime: 22,
-                minDeliveryTime: 22,
-                maxDeliveryTime: 22,
-                lastMileTravel: 0.30000001192092896,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.3",
-            totalRatings: 10000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "641515",
-            name: "Sunny Paji Da Dhaba",
-            uuid: "a0629030-2650-4a02-bafb-3eabf01cc1dc",
-            city: "60",
-            area: "Sarveshwar Chowk",
-            totalRatingsString: "500+ ratings",
-            cloudinaryImageId: "674b9a6c847fc798129db173e60ccd57",
-            cuisines: [
-                "Thalis",
-                "Punjabi",
-                "Chinese"
-            ],
-            tags: [],
-            costForTwo: 30000,
-            costForTwoString: "₹300 FOR TWO",
-            deliveryTime: 18,
-            minDeliveryTime: 18,
-            maxDeliveryTime: 18,
-            slaString: "18 MINS",
-            lastMileTravel: 2.299999952316284,
-            slugs: {
-                restaurant: "sunny-paji-da-dhaba-race-course-road-race-course-road-2",
-                city: "rajkot"
-            },
-            cityState: "60",
-            address: "Krishna Kunj Street no.21, Sardar Nagar, Rajkot  360001",
-            locality: "Sardar Nagar",
-            parentId: 197217,
-            unserviceable: false,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "60% off",
-                shortDescriptionList: [
-                    {
-                        meta: "60% off | Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "60% off up to ₹120 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "60% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "60% off up to ₹120 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "2.2 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "641515",
-                deliveryTime: 18,
-                minDeliveryTime: 18,
-                maxDeliveryTime: 18,
-                lastMileTravel: 2.299999952316284,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.1",
-            totalRatings: 500,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "129509",
-            name: "Royal Punjabi & Chinese",
-            uuid: "7279b63b-47ac-499a-a29f-5c8c6977458b",
-            city: "60",
-            area: "Raiya Road",
-            totalRatingsString: "5000+ ratings",
-            cloudinaryImageId: "blrptn7rvbssnulhu8s4",
-            cuisines: [
-                "Chinese",
-                "North Indian",
-                "Burgers",
-                "Pizzas",
-                "Biryani"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 22,
-            minDeliveryTime: 22,
-            maxDeliveryTime: 22,
-            slaString: "22 MINS",
-            lastMileTravel: 3,
-            slugs: {
-                restaurant: "royal-punjabi-chinese-raiya-road-race-course-road",
-                city: "rajkot"
-            },
-            cityState: "60",
-            address: "Royal Punjabi & Chinese, Opposite Sadguru Tirthdham, Near RK Pan, Raiya Road, Rajkot",
-            locality: "Rk Pan",
-            parentId: 172406,
-            unserviceable: false,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "60% off",
-                shortDescriptionList: [
-                    {
-                        meta: "60% off | Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "60% off up to ₹120 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "60% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "60% off up to ₹120 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            ribbon: [
-                {
-                    type: "PROMOTED"
-                }
-            ],
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "cid=5802083~p=10~eid=00000186-79eb-efdb-2507-28b700860a0a",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "3 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "129509",
-                deliveryTime: 22,
-                minDeliveryTime: 22,
-                maxDeliveryTime: 22,
-                lastMileTravel: 3,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: true,
-            avgRating: "3.8",
-            totalRatings: 5000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "101840",
-            name: "Bharmal Restaurant",
-            uuid: "455629fe-6b51-467a-a907-fa40052bf3b4",
-            city: "60",
-            area: "Nutan Press Road",
-            totalRatingsString: "5000+ ratings",
-            cloudinaryImageId: "gmyhcgd6fgtvnvhv8jic",
-            cuisines: [
-                "North Indian",
-                "Biryani"
-            ],
-            tags: [],
-            costForTwo: 25000,
-            costForTwoString: "₹250 FOR TWO",
-            deliveryTime: 14,
-            minDeliveryTime: 14,
-            maxDeliveryTime: 14,
-            slaString: "14 MINS",
-            lastMileTravel: 0.8999999761581421,
-            slugs: {
-                restaurant: "bharmal-restaurant-race-course-road-race-course-road",
-                city: "rajkot"
-            },
-            cityState: "60",
-            address: "Opposite Huseni Tower, Nutan Press Road, Race Course, Rajkot",
-            locality: "Race Course Road",
-            parentId: 44473,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "50% off",
-                shortDescriptionList: [
-                    {
-                        meta: "50% off | Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "50% off up to ₹100 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "50% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "50% off up to ₹100 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "0.8 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "101840",
-                deliveryTime: 14,
-                minDeliveryTime: 14,
-                maxDeliveryTime: 14,
-                lastMileTravel: 0.8999999761581421,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.6",
-            totalRatings: 5000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "378293",
-            name: "Wok On Fire",
-            uuid: "418c30a0-136e-4731-a460-4f443a8039b3",
-            city: "60",
-            area: "Race Course Road",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "qxutdkhdxmkmwpaufwu1",
-            cuisines: [
-                "Chinese",
-                "Thai",
-                "Asian"
-            ],
-            tags: [],
-            costForTwo: 40000,
-            costForTwoString: "₹400 FOR TWO",
-            deliveryTime: 26,
-            minDeliveryTime: 26,
-            maxDeliveryTime: 26,
-            slaString: "26 MINS",
-            lastMileTravel: 2.200000047683716,
-            slugs: {
-                restaurant: "wok-on-fire-race-course-road-race-course-road",
-                city: "rajkot"
-            },
-            cityState: "60",
-            address: "GF 56 PRIDE EMPIRENR UNION BANK RACE COURSERAJKOT GUJARAT",
-            locality: "Union Bank",
-            parentId: 5825,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            aggregatedDiscountInfo: {
-                header: "40% off",
-                shortDescriptionList: [
-                    {
-                        meta: "40% off | Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "40% off up to ₹80 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            aggregatedDiscountInfoV2: {
-                header: "40% OFF",
-                shortDescriptionList: [
-                    {
-                        meta: "Use TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                descriptionList: [
-                    {
-                        meta: "40% off up to ₹80 | Use code TRYNEW",
-                        discountType: "Percentage",
-                        operationType: "RESTAURANT"
-                    }
-                ],
-                subHeader: "",
-                headerType: 0,
-                superFreedel: ""
-            },
-            ribbon: [
-                {
-                    type: "PROMOTED"
-                }
-            ],
-            chain: [],
-            feeDetails: {
-                fees: [],
-                totalFees: 0,
-                message: "",
-                title: "",
-                amount: "",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "cid=5963013~p=13~eid=00000186-79eb-efdb-2507-28b800860d1e",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "2.2 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "378293",
-                deliveryTime: 26,
-                minDeliveryTime: 26,
-                maxDeliveryTime: 26,
-                lastMileTravel: 2.200000047683716,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: true,
-            avgRating: "4.2",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    }
-];
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9xmpe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.8.1
  *
@@ -34313,6 +32362,1989 @@ function getTargetMatch(matches, location) {
     return pathMatches[pathMatches.length - 1];
 } //#endregion
 
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("848749f5416ae40");
+function debounce(func, delay) {
+    {
+        let timeout = undefined;
+        let lastTime = 0;
+        return function(args) {
+            // Call immediately if last call was more than the delay ago.
+            // Otherwise, set a timeout. This means the first call is fast
+            // (for the common case of a single update), and subsequent updates
+            // are batched.
+            let now = Date.now();
+            if (now - lastTime > delay) {
+                lastTime = now;
+                func.call(null, args);
+            } else {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = undefined;
+                    lastTime = Date.now();
+                    func.call(null, args);
+                }, delay);
+            }
+        };
+    }
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30); // Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports; // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+} // When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        Refresh.register(exportValue, id + " %exports% " + key);
+    }
+}
+
+},{"848749f5416ae40":"786KC"}],"eUZ6J":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$fbbd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$fbbd.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: " mx-auto text-center bg-slate-200 font-bold p-4 mt-auto mb-0",
+        children: [
+            "Copyright \xa9 Bojan.com | Made in",
+            " ",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                className: "fa-solid fa-heart text-red-600 text-xl"
+            }, void 0, false, {
+                fileName: "src/Components/Footer.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, undefined),
+            " By",
+            " ",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                href: "https://pankajktech.me",
+                className: "text-lg text-teal-600",
+                target: "_blank",
+                children: [
+                    "Pankaj Kumar",
+                    " "
+                ]
+            }, void 0, true, {
+                fileName: "src/Components/Footer.js",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/Components/Footer.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$fbbd.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6J35F":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4f14 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4f14.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _shimmerJs = require("./Shimmer.js");
+var _shimmerJsDefault = parcelHelpers.interopDefault(_shimmerJs);
+var _restaurantCard = require("./RestaurantCard");
+var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
+var _s = $RefreshSig$();
+// import notFound from "./notFound.js";
+function filterData(searchText, allRestaurants) {
+    return allRestaurants.filter((restaurant)=>restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase()));
+}
+const Body = ()=>{
+    _s();
+    const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
+    const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]);
+    const [searchText, setSearchText] = (0, _react.useState)("");
+    (0, _react.useEffect)(()=>{
+        fetchRestaurants();
+    }, []);
+    async function fetchRestaurants() {
+        const API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6139391&lng=77.2090212&page_type=DESKTOP_WEB_LISTING";
+        const response = await fetch(API_URL);
+        const data = await response.json();
+        setAllRestaurants(data?.data?.cards[2]?.data?.data?.cards);
+        setFilteredRestaurants(data?.data?.cards[2]?.data?.data?.cards);
+    }
+    // if(!allRestaurants ===0) return null;
+    // if(filteredRestaurants.length===0) return notFound();
+    return allRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
+        fileName: "src/Components/Body.js",
+        lineNumber: 34,
+        columnNumber: 5
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex items-center justify-center my-5",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        name: "search",
+                        value: searchText,
+                        autoFocus: true,
+                        placeholder: "Search For Restaurant ...",
+                        className: "border border-gray-light focus:border-2 focus:border-slate-800 px-6 h-12 focus:outline-none focus:shadow-lg w-[70%] lg:w-[45%] rounded-full",
+                        onChange: (e)=>setSearchText(e.target.value)
+                    }, void 0, false, {
+                        fileName: "src/Components/Body.js",
+                        lineNumber: 38,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: " bg-slate-900 text-white shadow-lg p-2 h-12 -m-6 lg:-m-18 rounded-r-full w-20 hover:bg-slate-700 ",
+                        onClick: ()=>{
+                            const data = filterData(searchText, allRestaurants);
+                            setFilteredRestaurants(data);
+                        },
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                            className: "fa-solid fa-magnifying-glass mr-2"
+                        }, void 0, false, {
+                            fileName: "src/Components/Body.js",
+                            lineNumber: 55,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/Components/Body.js",
+                        lineNumber: 48,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/Components/Body.js",
+                lineNumber: 37,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-wrap justify-center xl:mx-10 min-h-[75vh]",
+                children: filteredRestaurants.map((restaurant)=>{
+                    return /*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
+                        ...restaurant.data,
+                        key: restaurant.data.id,
+                        __source: {
+                            fileName: "src/Components/Body.js",
+                            lineNumber: 62,
+                            columnNumber: 13
+                        },
+                        __self: undefined
+                    });
+                })
+            }, void 0, false, {
+                fileName: "src/Components/Body.js",
+                lineNumber: 59,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Body, "7qBCbMasD3wgFZOaohLYrNPvx0s=");
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$4f14.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Shimmer.js":"c7s09","./RestaurantCard":"kZnAN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"c7s09":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5bd8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5bd8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex flex-wrap justify-center items-center",
+        children: Array(8).fill(" ").map(()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "bg-slate-300 m-10 w-72 h-80 animate-pulse"
+                }, void 0, false, {
+                    fileName: "src/Components/Shimmer.js",
+                    lineNumber: 8,
+                    columnNumber: 13
+                }, undefined)
+            }, void 0, false))
+    }, void 0, false, {
+        fileName: "src/Components/Shimmer.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$5bd8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kZnAN":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bb0d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bb0d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _contents = require("../Contents");
+const RestaurantCard = ({ name , cuisines , avgRating , cloudinaryImageId , deliveryTime  })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "m-10 w-72 h-auto bg-white shadow-xl hover:scale-105 duration-500 cursor-pointer ",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _contents.IMG_CDN_LINK) + cloudinaryImageId,
+                className: "w-80 h-52 mb-2"
+            }, void 0, false, {
+                fileName: "src/Components/RestaurantCard.js",
+                lineNumber: 12,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "p-3",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "text-xl text-sky-800 font-bold",
+                        children: [
+                            " ",
+                            name,
+                            " "
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Components/RestaurantCard.js",
+                        lineNumber: 14,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "my-2 text-sm",
+                        children: cuisines.join(",")
+                    }, void 0, false, {
+                        fileName: "src/Components/RestaurantCard.js",
+                        lineNumber: 15,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "my-4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "bg-green-600 ml-3 mr-6 px-2 text-sm text-white",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        className: "fa-regular fa-star text-white fa-sm mr-1"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/RestaurantCard.js",
+                                        lineNumber: 18,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    avgRating
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/RestaurantCard.js",
+                                lineNumber: 17,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "",
+                                children: [
+                                    deliveryTime,
+                                    "min Delivery Time"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/Components/RestaurantCard.js",
+                                lineNumber: 21,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Components/RestaurantCard.js",
+                        lineNumber: 16,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/Components/RestaurantCard.js",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/Components/RestaurantCard.js",
+        lineNumber: 11,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RestaurantCard;
+exports.default = RestaurantCard;
+var _c;
+$RefreshReg$(_c, "RestaurantCard");
+
+  $parcel$ReactRefreshHelpers$bb0d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../Contents":"de8bC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"de8bC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "IMG_CDN_LINK", ()=>IMG_CDN_LINK);
+parcelHelpers.export(exports, "RestaurantList", ()=>RestaurantList);
+const IMG_CDN_LINK = "https://res.cloudinary.com/swiggy/image/upload/";
+const RestaurantList = [
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "256941",
+            name: "Cha Vala Cafe",
+            uuid: "8bde5bbc-7738-454b-b1b9-877327d28d88",
+            city: "60",
+            area: "Race Course Road",
+            totalRatingsString: "100+ ratings",
+            cloudinaryImageId: "xkhqg1ctmqtlm2omlpte",
+            cuisines: [
+                "Snacks",
+                "Beverages"
+            ],
+            tags: [],
+            costForTwo: 10000,
+            costForTwoString: "₹100 FOR TWO",
+            deliveryTime: 22,
+            minDeliveryTime: 22,
+            maxDeliveryTime: 22,
+            slaString: "22 MINS",
+            lastMileTravel: 2.299999952316284,
+            slugs: {
+                restaurant: "cha-vala-cafe-race-course-road-race-course-road",
+                city: "rajkot"
+            },
+            cityState: "60",
+            address: "shop no.5, Avishkar Appartment, Nr Big Bite, Race course ring road, Rajkot",
+            locality: "Avishkar Appartment, Race Course Ring Road",
+            parentId: 20014,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FREE DELIVERY",
+                shortDescriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "",
+                shortDescriptionList: [
+                    {
+                        meta: "Free Delivery",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=5930912~p=10~eid=00000186-86bb-85aa-313d-3d6900860a43",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "2.2 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "256941",
+                deliveryTime: 22,
+                minDeliveryTime: 22,
+                maxDeliveryTime: 22,
+                lastMileTravel: 2.299999952316284,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "4.3",
+            totalRatings: 100,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "86658",
+            name: "Joker Gathiya",
+            uuid: "b4ac1433-cc81-4969-936f-4ed95a0bec7f",
+            city: "60",
+            area: "Limbda Chowk",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "cn17nlksgfwb8fltmxku",
+            cuisines: [
+                "Desserts"
+            ],
+            tags: [],
+            costForTwo: 10000,
+            costForTwoString: "₹100 FOR TWO",
+            deliveryTime: 15,
+            minDeliveryTime: 15,
+            maxDeliveryTime: 15,
+            slaString: "15 MINS",
+            lastMileTravel: 1.100000023841858,
+            slugs: {
+                restaurant: "joker-gathiya-jawahar-road-race-course-road",
+                city: "rajkot"
+            },
+            cityState: "60",
+            address: "Opp Rasikbhai Chevda wala, beside hotel comfort Inn, Limda Chowk, Rajkot.",
+            locality: "Limbda Chowk",
+            parentId: 111408,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FREE DELIVERY",
+                shortDescriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "",
+                shortDescriptionList: [
+                    {
+                        meta: "Free Delivery",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.1 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "86658",
+                deliveryTime: 15,
+                minDeliveryTime: 15,
+                maxDeliveryTime: 15,
+                lastMileTravel: 1.100000023841858,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.0",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "84290",
+            name: "Chatkazz",
+            uuid: "0c38af35-ef99-48de-919a-7679f5d4e53c",
+            city: "60",
+            area: "Limda Chowk",
+            totalRatingsString: "5000+ ratings",
+            cloudinaryImageId: "Swiggy-Dash/juejh1ph1onenswanqzq",
+            cuisines: [
+                "Chinese",
+                "North Indian",
+                "Burgers",
+                "Pizzas",
+                "Biryani"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 23,
+            minDeliveryTime: 23,
+            maxDeliveryTime: 23,
+            slaString: "23 MINS",
+            lastMileTravel: 1.100000023841858,
+            slugs: {
+                restaurant: "chatkazz-arya-nagar-race-course-road",
+                city: "rajkot"
+            },
+            cityState: "60",
+            address: "Limda Chowk, Trikon Baug, Panchnath Plot, Arya Nagar, Rajkot",
+            locality: "Trikon Baug",
+            parentId: 6343,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "10% off",
+                shortDescriptionList: [
+                    {
+                        meta: "10% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "10% off up to ₹40 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "10% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "10% off up to ₹40 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.1 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "84290",
+                deliveryTime: 23,
+                minDeliveryTime: 23,
+                maxDeliveryTime: 23,
+                lastMileTravel: 1.100000023841858,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.7",
+            totalRatings: 5000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "223930",
+            name: "Sangam Variety",
+            uuid: "dd09d80c-f362-44a3-91c4-0bb8c8431a06",
+            city: "60",
+            area: "Sadar Bazar",
+            totalRatingsString: "20+ ratings",
+            cloudinaryImageId: "yzgkkerzdz547jjahlqa",
+            cuisines: [
+                "Sweets"
+            ],
+            tags: [],
+            costForTwo: 30000,
+            costForTwoString: "₹300 FOR TWO",
+            deliveryTime: 17,
+            minDeliveryTime: 17,
+            maxDeliveryTime: 17,
+            slaString: "17 MINS",
+            lastMileTravel: 0.8999999761581421,
+            slugs: {
+                restaurant: "sangam-chikki-race-course-road-race-course-road",
+                city: "rajkot"
+            },
+            cityState: "60",
+            address: "Sangam Chikki, Sadar Bazar, Sadar, Rajkot",
+            locality: "Sadar",
+            parentId: 177175,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "FREE DELIVERY",
+                shortDescriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "",
+                shortDescriptionList: [
+                    {
+                        meta: "Free Delivery",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "FREE DELIVERY",
+                        discountType: "FREE_DELIVERY",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "0.8 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "223930",
+                deliveryTime: 17,
+                minDeliveryTime: 17,
+                maxDeliveryTime: 17,
+                lastMileTravel: 0.8999999761581421,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.7",
+            totalRatings: 20,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "167232",
+            name: "Amrut Sweet Namkeen & Dairy Farm",
+            uuid: "d207677f-bc55-4c64-9c21-29e7eaddf159",
+            city: "60",
+            area: "Junction Plot",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "cm9th19uzfjhiuw3mkem",
+            cuisines: [
+                "Sweets",
+                "Snacks"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 16,
+            minDeliveryTime: 16,
+            maxDeliveryTime: 16,
+            slaString: "16 MINS",
+            lastMileTravel: 1.100000023841858,
+            slugs: {
+                restaurant: "amrut-sweet-and-namkeen-station-marg-race-course-road",
+                city: "rajkot"
+            },
+            cityState: "60",
+            address: "Amrut Sweet and Namkeen, Near Rajkot Railway Station, Station Marg, Rajkot.",
+            locality: "Station Marg",
+            parentId: 32275,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "50% off",
+                shortDescriptionList: [
+                    {
+                        meta: "50% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "50% off up to ₹100 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "50% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "50% off up to ₹100 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.1 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "167232",
+                deliveryTime: 16,
+                minDeliveryTime: 16,
+                maxDeliveryTime: 16,
+                lastMileTravel: 1.100000023841858,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.1",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "85860",
+            name: "Sargam Food",
+            uuid: "e357c369-dac0-4a38-ba19-bf3a5495dfe7",
+            city: "60",
+            area: "Junction Plot",
+            totalRatingsString: "10000+ ratings",
+            cloudinaryImageId: "bqgtntm79sjwhd5kdajl",
+            cuisines: [
+                "Chinese",
+                "North Indian",
+                "South Indian",
+                "Burgers",
+                "Pizzas",
+                "Biryani"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 12,
+            minDeliveryTime: 12,
+            maxDeliveryTime: 12,
+            slaString: "12 MINS",
+            lastMileTravel: 0.6000000238418579,
+            slugs: {
+                restaurant: "sargam-food-junction-plot-race-course-road",
+                city: "rajkot"
+            },
+            cityState: "60",
+            address: "Ground floor, Bilkha plaza, Kasturba road, opp. mohanbhai hall, Rajkot",
+            locality: "Junction Plot",
+            parentId: 178390,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "60% off",
+                shortDescriptionList: [
+                    {
+                        meta: "60% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "60% off up to ₹120 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "60% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "60% off up to ₹120 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "0.6 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "85860",
+                deliveryTime: 12,
+                minDeliveryTime: 12,
+                maxDeliveryTime: 12,
+                lastMileTravel: 0.6000000238418579,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.2",
+            totalRatings: 10000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "214923",
+            name: "Iqbal Restaurant",
+            uuid: "eb2e4785-b779-4ede-93b5-6c94a9cc26fe",
+            city: "60",
+            area: "Lakhajiraj Road",
+            totalRatingsString: "5000+ ratings",
+            cloudinaryImageId: "umnt1isog8xq57hijqek",
+            cuisines: [
+                "North Indian",
+                "Biryani",
+                "Mughlai",
+                "Pizzas"
+            ],
+            tags: [],
+            costForTwo: 25000,
+            costForTwoString: "₹250 FOR TWO",
+            deliveryTime: 14,
+            minDeliveryTime: 14,
+            maxDeliveryTime: 14,
+            slaString: "14 MINS",
+            lastMileTravel: 1.100000023841858,
+            slugs: {
+                restaurant: "iqbal-food-parcel-race-course-road-race-course-road",
+                city: "rajkot"
+            },
+            cityState: "60",
+            address: "Iqbal Non Veg Restaurant, Sir Lakhajiraj Road, Bangdi Bazar, Lohana Para, Rajkot, Gujarat, India",
+            locality: "Lakhaji Raj Road",
+            parentId: 107307,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "10% off",
+                shortDescriptionList: [
+                    {
+                        meta: "10% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "10% off up to ₹40 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "10% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "10% off up to ₹40 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.1 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "214923",
+                deliveryTime: 14,
+                minDeliveryTime: 14,
+                maxDeliveryTime: 14,
+                lastMileTravel: 1.100000023841858,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.3",
+            totalRatings: 5000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "85692",
+            name: "The Grand Thakar - TGT",
+            uuid: "1570e79f-5ae8-4e8a-bf5d-19d9d7e966fa",
+            city: "60",
+            area: "Jubeli Chowk",
+            totalRatingsString: "10000+ ratings",
+            cloudinaryImageId: "aqjtcoxwuvbcnykea5ci",
+            cuisines: [
+                "Gujarati",
+                "Punjabi",
+                "North Indian",
+                "Chinese",
+                "Continental",
+                "Pizzas",
+                "Biryani"
+            ],
+            tags: [],
+            costForTwo: 30000,
+            costForTwoString: "₹300 FOR TWO",
+            deliveryTime: 22,
+            minDeliveryTime: 22,
+            maxDeliveryTime: 22,
+            slaString: "22 MINS",
+            lastMileTravel: 0.30000001192092896,
+            slugs: {
+                restaurant: "the-grand-thakar-kothi-compound-race-course-road",
+                city: "rajkot"
+            },
+            cityState: "60",
+            address: "Near Jubilee Garden, Kothi Compound, Rajkot",
+            locality: "Jawahar Road",
+            parentId: 257532,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "10% off",
+                shortDescriptionList: [
+                    {
+                        meta: "10% off | Use PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "10% off | Use code PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "10% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "10% off | Use code PARTY",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "0.3 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "85692",
+                deliveryTime: 22,
+                minDeliveryTime: 22,
+                maxDeliveryTime: 22,
+                lastMileTravel: 0.30000001192092896,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.3",
+            totalRatings: 10000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "641515",
+            name: "Sunny Paji Da Dhaba",
+            uuid: "a0629030-2650-4a02-bafb-3eabf01cc1dc",
+            city: "60",
+            area: "Sarveshwar Chowk",
+            totalRatingsString: "500+ ratings",
+            cloudinaryImageId: "674b9a6c847fc798129db173e60ccd57",
+            cuisines: [
+                "Thalis",
+                "Punjabi",
+                "Chinese"
+            ],
+            tags: [],
+            costForTwo: 30000,
+            costForTwoString: "₹300 FOR TWO",
+            deliveryTime: 18,
+            minDeliveryTime: 18,
+            maxDeliveryTime: 18,
+            slaString: "18 MINS",
+            lastMileTravel: 2.299999952316284,
+            slugs: {
+                restaurant: "sunny-paji-da-dhaba-race-course-road-race-course-road-2",
+                city: "rajkot"
+            },
+            cityState: "60",
+            address: "Krishna Kunj Street no.21, Sardar Nagar, Rajkot  360001",
+            locality: "Sardar Nagar",
+            parentId: 197217,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "60% off",
+                shortDescriptionList: [
+                    {
+                        meta: "60% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "60% off up to ₹120 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "60% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "60% off up to ₹120 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "2.2 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "641515",
+                deliveryTime: 18,
+                minDeliveryTime: 18,
+                maxDeliveryTime: 18,
+                lastMileTravel: 2.299999952316284,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.1",
+            totalRatings: 500,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "129509",
+            name: "Royal Punjabi & Chinese",
+            uuid: "7279b63b-47ac-499a-a29f-5c8c6977458b",
+            city: "60",
+            area: "Raiya Road",
+            totalRatingsString: "5000+ ratings",
+            cloudinaryImageId: "blrptn7rvbssnulhu8s4",
+            cuisines: [
+                "Chinese",
+                "North Indian",
+                "Burgers",
+                "Pizzas",
+                "Biryani"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 22,
+            minDeliveryTime: 22,
+            maxDeliveryTime: 22,
+            slaString: "22 MINS",
+            lastMileTravel: 3,
+            slugs: {
+                restaurant: "royal-punjabi-chinese-raiya-road-race-course-road",
+                city: "rajkot"
+            },
+            cityState: "60",
+            address: "Royal Punjabi & Chinese, Opposite Sadguru Tirthdham, Near RK Pan, Raiya Road, Rajkot",
+            locality: "Rk Pan",
+            parentId: 172406,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "60% off",
+                shortDescriptionList: [
+                    {
+                        meta: "60% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "60% off up to ₹120 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "60% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "60% off up to ₹120 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=5802083~p=10~eid=00000186-79eb-efdb-2507-28b700860a0a",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "3 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "129509",
+                deliveryTime: 22,
+                minDeliveryTime: 22,
+                maxDeliveryTime: 22,
+                lastMileTravel: 3,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "3.8",
+            totalRatings: 5000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "101840",
+            name: "Bharmal Restaurant",
+            uuid: "455629fe-6b51-467a-a907-fa40052bf3b4",
+            city: "60",
+            area: "Nutan Press Road",
+            totalRatingsString: "5000+ ratings",
+            cloudinaryImageId: "gmyhcgd6fgtvnvhv8jic",
+            cuisines: [
+                "North Indian",
+                "Biryani"
+            ],
+            tags: [],
+            costForTwo: 25000,
+            costForTwoString: "₹250 FOR TWO",
+            deliveryTime: 14,
+            minDeliveryTime: 14,
+            maxDeliveryTime: 14,
+            slaString: "14 MINS",
+            lastMileTravel: 0.8999999761581421,
+            slugs: {
+                restaurant: "bharmal-restaurant-race-course-road-race-course-road",
+                city: "rajkot"
+            },
+            cityState: "60",
+            address: "Opposite Huseni Tower, Nutan Press Road, Race Course, Rajkot",
+            locality: "Race Course Road",
+            parentId: 44473,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "50% off",
+                shortDescriptionList: [
+                    {
+                        meta: "50% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "50% off up to ₹100 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "50% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "50% off up to ₹100 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "0.8 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "101840",
+                deliveryTime: 14,
+                minDeliveryTime: 14,
+                maxDeliveryTime: 14,
+                lastMileTravel: 0.8999999761581421,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.6",
+            totalRatings: 5000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "378293",
+            name: "Wok On Fire",
+            uuid: "418c30a0-136e-4731-a460-4f443a8039b3",
+            city: "60",
+            area: "Race Course Road",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "qxutdkhdxmkmwpaufwu1",
+            cuisines: [
+                "Chinese",
+                "Thai",
+                "Asian"
+            ],
+            tags: [],
+            costForTwo: 40000,
+            costForTwoString: "₹400 FOR TWO",
+            deliveryTime: 26,
+            minDeliveryTime: 26,
+            maxDeliveryTime: 26,
+            slaString: "26 MINS",
+            lastMileTravel: 2.200000047683716,
+            slugs: {
+                restaurant: "wok-on-fire-race-course-road-race-course-road",
+                city: "rajkot"
+            },
+            cityState: "60",
+            address: "GF 56 PRIDE EMPIRENR UNION BANK RACE COURSERAJKOT GUJARAT",
+            locality: "Union Bank",
+            parentId: 5825,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            aggregatedDiscountInfo: {
+                header: "40% off",
+                shortDescriptionList: [
+                    {
+                        meta: "40% off | Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "40% off up to ₹80 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            aggregatedDiscountInfoV2: {
+                header: "40% OFF",
+                shortDescriptionList: [
+                    {
+                        meta: "Use TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                descriptionList: [
+                    {
+                        meta: "40% off up to ₹80 | Use code TRYNEW",
+                        discountType: "Percentage",
+                        operationType: "RESTAURANT"
+                    }
+                ],
+                subHeader: "",
+                headerType: 0,
+                superFreedel: ""
+            },
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [],
+                totalFees: 0,
+                message: "",
+                title: "",
+                amount: "",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=5963013~p=13~eid=00000186-79eb-efdb-2507-28b800860d1e",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "2.2 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "378293",
+                deliveryTime: 26,
+                minDeliveryTime: 26,
+                maxDeliveryTime: 26,
+                lastMileTravel: 2.200000047683716,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "4.2",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    }
+];
+
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"19tXb":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$06db = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -34505,29 +34537,50 @@ const Error = ()=>{
     const error = (0, _reactRouterDom.useRouteError)();
     console.log(error);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    children: "Oops, There is Something Wrong"
-                }, void 0, false, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex flex-col justify-center items-center min-h-screen ",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: " text-5xl",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                            class: "fa-regular fa-face-meh-blank fa-3xl mr-3"
+                        }, void 0, false, {
+                            fileName: "src/Components/Error.js",
+                            lineNumber: 9,
+                            columnNumber: 35
+                        }, undefined),
+                        "Oops, There is Something Wrong"
+                    ]
+                }, void 0, true, {
                     fileName: "src/Components/Error.js",
                     lineNumber: 9,
                     columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    className: "text-2xl my-3",
+                    children: error.status + " : " + error.statusText
+                }, void 0, false, {
+                    fileName: "src/Components/Error.js",
+                    lineNumber: 10,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                    href: "/",
+                    className: "text-2xl text-blue-500 hover:text-blue-700",
+                    children: "Go Back"
+                }, void 0, false, {
+                    fileName: "src/Components/Error.js",
+                    lineNumber: 11,
+                    columnNumber: 7
                 }, undefined)
-            }, void 0, false, {
-                fileName: "src/Components/Error.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: error
-            }, void 0, false, {
-                fileName: "src/Components/Error.js",
-                lineNumber: 14,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
+            ]
+        }, void 0, true, {
+            fileName: "src/Components/Error.js",
+            lineNumber: 8,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false);
 };
 _s(Error, "oAgjgbJzsRXlB89+MoVumxMQqKM=", false, function() {
     return [
@@ -34544,6 +34597,525 @@ $RefreshReg$(_c, "Error");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","cJcMZ","2kQhy"], "2kQhy", "parcelRequire77dd")
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"66EYZ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$84fc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$84fc.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Contact = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            class: "flex flex-col md:flex-row justify-center items-center lg:my-10 lg:mx-52 min-h-[75vh]",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    class: "bg-slate-200 text-slate-900 lg:mr-10 w-[100%] lg:w-1/2 flex flex-col h-[480px] text-2xl drop-shadow-2xl border-b-2 border-b-sky-600 lg:border-none p-10 justify-center items-center",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            class: "mx-auto",
+                            children: "Contact Information"
+                        }, void 0, false, {
+                            fileName: "src/Components/Contact.js",
+                            lineNumber: 6,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            class: "my-6",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    class: "my-8",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                            class: "fa-solid fa-map-marker-alt fa-md"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/Contact.js",
+                                            lineNumber: 10,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                            children: "Address:"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/Contact.js",
+                                            lineNumber: 11,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            class: "text-sky-500 hover:text-teal-700",
+                                            children: "Gujarat, India"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/Contact.js",
+                                            lineNumber: 12,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/Contact.js",
+                                    lineNumber: 9,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    class: "my-8",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                            class: "fa-solid fa-envelope fa-md"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/Contact.js",
+                                            lineNumber: 17,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                            children: "Email:"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/Contact.js",
+                                            lineNumber: 18,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            href: "mailto:tunewithpa@gmail.com",
+                                            class: "text-sky-500 hover:text-teal-700",
+                                            children: "tunewithpk@gmail.com"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/Contact.js",
+                                            lineNumber: 19,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/Contact.js",
+                                    lineNumber: 16,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/Components/Contact.js",
+                            lineNumber: 8,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            class: "mx-auto mt-auto",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    href: "https://www.github.com/pankajktech/",
+                                    target: "_blank",
+                                    class: "m-2 xl:m-4",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-brands fa-github hover:scale-125 duration-300"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Contact.js",
+                                        lineNumber: 33,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/Components/Contact.js",
+                                    lineNumber: 28,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    href: "https://www.linkedin.com/in/pankajktech/",
+                                    target: "_blank",
+                                    class: "m-2 xl:m-4",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-brands fa-linkedin hover:scale-125 duration-300 text-sky-700"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Contact.js",
+                                        lineNumber: 40,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/Components/Contact.js",
+                                    lineNumber: 35,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    href: "https://www.twitter.com/pankajthakuroff/",
+                                    target: "_blank",
+                                    class: "m-2 xl:m-4",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-brands fa-twitter hover:scale-125 duration-300 text-sky-500"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Contact.js",
+                                        lineNumber: 47,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/Components/Contact.js",
+                                    lineNumber: 42,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    href: "https://www.instagram.com/pankajthakuroff/",
+                                    target: "_blank",
+                                    class: "m-2 xl:m-4",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-brands fa-instagram hover:scale-125 duration-300 text-red-500"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Contact.js",
+                                        lineNumber: 54,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/Components/Contact.js",
+                                    lineNumber: 49,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    href: "https://youtube.com/@techypkt",
+                                    target: "_blank",
+                                    class: "m-2",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-brands fa-youtube hover:scale-125 duration-300 text-red-600"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Contact.js",
+                                        lineNumber: 57,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/Components/Contact.js",
+                                    lineNumber: 56,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/Components/Contact.js",
+                            lineNumber: 27,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/Components/Contact.js",
+                    lineNumber: 5,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    class: "bg-slate-200 w-[100%] lg:w-1/2 h-[480px] lg:my-10 flex justify-center items-center drop-shadow-2xl",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        class: "h-auto flex flex-col mx-auto justify-center items-center",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "text",
+                                name: "name",
+                                placeholder: "Enter Your Name",
+                                required: true,
+                                class: "h-10 rounded-sm placeholder:text-slate-800 block focus:shadow-lg focus:shadow-blue-400 w-[300px] md:w-[500px] py-2 focus:outline-none focus:ring-border-gray-900 ring-1 ring-slate-400 px-4 focus:ring-1 focus:ring-slate-800 sm:text-sm my-3"
+                            }, void 0, false, {
+                                fileName: "src/Components/Contact.js",
+                                lineNumber: 64,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "email",
+                                name: "email",
+                                placeholder: "Enter Your Email",
+                                required: true,
+                                class: "h-10 rounded-sm placeholder:text-slate-800 block focus:shadow-lg focus:shadow-blue-400 w-[300px] md:w-[500px] py-2 focus:outline-none focus:ring-border-gray-900 ring-1 ring-slate-400 px-4 focus:ring-1 focus:ring-slate-800 sm:text-sm my-3"
+                            }, void 0, false, {
+                                fileName: "src/Components/Contact.js",
+                                lineNumber: 72,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
+                                name: "",
+                                rows: "10",
+                                "aria-setsize": "fixed",
+                                required: true,
+                                class: "h-52 rounded-sm placeholder:text-slate-800 block focus:shadow-lg focus:shadow-blue-400 w-[300px] md:w-[500px] py-2 focus:outline-none focus:ring-border-gray-900 ring-1 ring-slate-400 px-4 focus:ring-1 focus:ring-slate-800 sm:text-sm my-3",
+                                placeholder: "Enter Your Message"
+                            }, void 0, false, {
+                                fileName: "src/Components/Contact.js",
+                                lineNumber: 80,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                class: "mx-auto",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                    type: "submit",
+                                    value: "Send Message",
+                                    class: "rounded-sm text-2xl bg-gray-800 text-slate-200 w-[300px] lg:w-52 h-10 mx-auto my-6 cursor-pointer hover:scale-110 transition duration-300 ease-in-out"
+                                }, void 0, false, {
+                                    fileName: "src/Components/Contact.js",
+                                    lineNumber: 90,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/Components/Contact.js",
+                                lineNumber: 89,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Components/Contact.js",
+                        lineNumber: 63,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/Components/Contact.js",
+                    lineNumber: 62,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/Components/Contact.js",
+            lineNumber: 4,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false);
+};
+_c = Contact;
+exports.default = Contact;
+var _c;
+$RefreshReg$(_c, "Contact");
+
+  $parcel$ReactRefreshHelpers$84fc.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"am7uj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$e208 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e208.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Signin = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+            class: "bg-gray-50 dark:bg-gray-700 shadow-2xl",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                class: "flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        href: "#",
+                        class: "flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                class: "w-8 h-8 mr-2",
+                                src: "https://cdn-icons-png.flaticon.com/512/2276/2276931.png",
+                                alt: "logo"
+                            }, void 0, false, {
+                                fileName: "src/Components/Signin.js",
+                                lineNumber: 10,
+                                columnNumber: 13
+                            }, undefined),
+                            "Bhojan.com"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Components/Signin.js",
+                        lineNumber: 6,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        class: "w-full bg-slate-800 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            class: "p-6 space-y-4 md:space-y-6 sm:p-8",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                    class: "text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white",
+                                    children: "Sign in to your account"
+                                }, void 0, false, {
+                                    fileName: "src/Components/Signin.js",
+                                    lineNumber: 19,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                                    class: "space-y-4 md:space-y-6",
+                                    action: "#",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                                    for: "email",
+                                                    class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white",
+                                                    children: "Your email"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Signin.js",
+                                                    lineNumber: 24,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                    type: "email",
+                                                    name: "email",
+                                                    id: "email",
+                                                    class: "bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
+                                                    placeholder: "name@company.com",
+                                                    required: ""
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Signin.js",
+                                                    lineNumber: 30,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/Signin.js",
+                                            lineNumber: 23,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                                    for: "password",
+                                                    class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white",
+                                                    children: "Password"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Signin.js",
+                                                    lineNumber: 40,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                    type: "password",
+                                                    name: "password",
+                                                    id: "password",
+                                                    placeholder: "••••••••",
+                                                    class: "bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
+                                                    required: ""
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Signin.js",
+                                                    lineNumber: 46,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/Signin.js",
+                                            lineNumber: 39,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            class: "flex items-center justify-between",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    class: "flex items-start",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            class: "flex items-center h-5",
+                                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                                id: "remember",
+                                                                "aria-describedby": "remember",
+                                                                type: "checkbox",
+                                                                class: "w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800",
+                                                                required: ""
+                                                            }, void 0, false, {
+                                                                fileName: "src/Components/Signin.js",
+                                                                lineNumber: 58,
+                                                                columnNumber: 23
+                                                            }, undefined)
+                                                        }, void 0, false, {
+                                                            fileName: "src/Components/Signin.js",
+                                                            lineNumber: 57,
+                                                            columnNumber: 21
+                                                        }, undefined),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            class: "ml-3 text-sm",
+                                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                                                for: "remember",
+                                                                class: "text-gray-500 dark:text-gray-300",
+                                                                children: "Remember me"
+                                                            }, void 0, false, {
+                                                                fileName: "src/Components/Signin.js",
+                                                                lineNumber: 67,
+                                                                columnNumber: 23
+                                                            }, undefined)
+                                                        }, void 0, false, {
+                                                            fileName: "src/Components/Signin.js",
+                                                            lineNumber: 66,
+                                                            columnNumber: 21
+                                                        }, undefined)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/Components/Signin.js",
+                                                    lineNumber: 56,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                    href: "#",
+                                                    class: "text-sm font-medium text-primary-600 hover:underline dark:text-primary-500",
+                                                    children: "Forgot password?"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Signin.js",
+                                                    lineNumber: 75,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/Signin.js",
+                                            lineNumber: 55,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            type: "submit",
+                                            class: "w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800",
+                                            children: "Sign in"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/Signin.js",
+                                            lineNumber: 82,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            class: "text-sm font-light text-gray-500 dark:text-gray-400",
+                                            children: [
+                                                "Don’t have an account yet?",
+                                                " ",
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                    href: "#",
+                                                    class: "font-medium text-primary-600 hover:underline dark:text-primary-500",
+                                                    children: "Sign up"
+                                                }, void 0, false, {
+                                                    fileName: "src/Components/Signin.js",
+                                                    lineNumber: 90,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Components/Signin.js",
+                                            lineNumber: 88,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/Signin.js",
+                                    lineNumber: 22,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/Components/Signin.js",
+                            lineNumber: 18,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/Components/Signin.js",
+                        lineNumber: 17,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/Components/Signin.js",
+                lineNumber: 5,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/Components/Signin.js",
+            lineNumber: 4,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false);
+};
+_c = Signin;
+exports.default = Signin;
+var _c;
+$RefreshReg$(_c, "Signin");
+
+  $parcel$ReactRefreshHelpers$e208.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","cJcMZ","2kQhy"], "2kQhy", "parcelRequire77dd")
 
 //# sourceMappingURL=index.7271efb6.js.map

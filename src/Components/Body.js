@@ -20,7 +20,7 @@ const Body = () => {
 
   async function fetchRestaurants() {
     const API_URL =
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&page_type=DESKTOP_WEB_LISTING";
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6139391&lng=77.2090212&page_type=DESKTOP_WEB_LISTING";
     const response = await fetch(API_URL);
     const data = await response.json();
     setAllRestaurants(data?.data?.cards[2]?.data?.data?.cards);
@@ -41,18 +41,18 @@ const Body = () => {
           value={searchText}
           autoFocus
           placeholder="Search For Restaurant ..."
-          className="ring-1 ring-slate-700 p-2 h-12 focus:outline-none focus:shadow-lg w-[45%] focus:ring-1 focus:ring-slate-900 rounded-sm"
+          className="border border-gray-light focus:border-2 focus:border-slate-800 px-6 h-12 focus:outline-none focus:shadow-lg w-[70%] lg:w-[45%] rounded-full"
           onChange={(e) => setSearchText(e.target.value)}
         />
 
         <button
-          className=" bg-slate-900 text-white shadow-lg p-2 h-12 rounded-sm w-28 hover:bg-slate-700 "
+          className=" bg-slate-900 text-white shadow-lg p-2 h-12 -m-6 lg:-m-18 rounded-r-full w-20 hover:bg-slate-700 "
           onClick={() => {
             const data = filterData(searchText, allRestaurants);
             setFilteredRestaurants(data);
           }}
         >
-          <i className="fa-solid fa-magnifying-glass mr-2"></i>Search
+          <i className="fa-solid fa-magnifying-glass mr-2"></i>
         </button>
       </div>
 

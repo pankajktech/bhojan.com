@@ -5,7 +5,7 @@ const Shimmer = () => {
         .fill(" ")
         .map(() => (
           <>
-            <div className="bg-slate-300 m-10 w-72 h-96 animate-pulse">
+            <div className="bg-slate-300 m-10 w-72 h-80 animate-pulse">
              
             </div>
           </>
