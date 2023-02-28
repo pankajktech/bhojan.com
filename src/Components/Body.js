@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
 import RestaurantCard from "./RestaurantCard";
+import { Link } from "react-router-dom";
 // import notFound from "./notFound.js";
 
 function filterData(searchText, allRestaurants) {
@@ -59,7 +60,7 @@ const Body = () => {
       <div className="flex flex-wrap justify-center xl:mx-10 min-h-[75vh]">
         {filteredRestaurants.map((restaurant) => {
           return (
-            <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
+          <Link to={/restaurant/ + restaurant.data.id}>  <RestaurantCard {...restaurant.data} key={restaurant.data.id} /></Link>
           );
         })}
       </div>

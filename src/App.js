@@ -1,4 +1,3 @@
-import React, { Children } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Components/Header.js";
 import Footer from "./Components/Footer.js";
@@ -8,6 +7,7 @@ import Aboutme from "./Components/About.js";
 import Error from "./Components/Error.js";
 import Contact from "./Components/Contact.js";
 import Signin from "./Components/Signin.js";
+import RestaurantInfo from "./Components/RestaurantInfo.js";
 
 function SwiggyPage() {
   return (
@@ -33,15 +33,19 @@ const appRouter = createBrowserRouter([
         path: "/Aboutme",
         element: <Aboutme />,
       },
-      
+
       {
         path: "/Contact",
-        element: <Contact/>,
+        element: <Contact />,
       },
       {
         path: "/Signin",
-        element: <Signin/>,
+        element: <Signin />,
       },
+      {
+        path: "/restaurant/:resId",
+        element: <RestaurantInfo />,
+      }
     ],
   },
 ]);

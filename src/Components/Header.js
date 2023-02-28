@@ -6,7 +6,7 @@ const Header = () => {
   const [signedin, setSignedin] = useState(false);
   return (
     <>
-      <div className="bg-slate-900 bg-opacity-10 shadow-sm flex justify-evenly lg:justify-around items-center sticky top-0 z-10 p-3 backdrop-blur-md">
+      <div className="bg-slate-900 bg-opacity-30 shadow-sm flex justify-evenly lg:justify-around items-center sticky top-0 z-10 p-3 backdrop-blur-md">
         <div className="flex flex-row justify-center items-center">
           <Link href="/">
             {" "}
