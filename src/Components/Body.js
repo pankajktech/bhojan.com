@@ -60,7 +60,9 @@ const Body = () => {
       <div className="flex flex-wrap justify-center xl:mx-10 min-h-[75vh]">
         {filteredRestaurants.map((restaurant) => {
           return (
-          <Link to={/restaurant/ + restaurant.data.id}>  <RestaurantCard {...restaurant.data} key={restaurant.data.id} /></Link>
+            <Link to={/restaurant/ + restaurant.data.id}>
+              <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
+            </Link>
           );
         })}
       </div>

@@ -24,8 +24,8 @@ const RestaurantInfo = () => {
   return !restaurant ? (
     <Shimmer />
   ) : (
-    <div className="flex mx-32 my-10 justify-between">
-      <div className=" mx-10 flex items-center flex-col">
+    <div className="flex lg:mx-52 my-10 lg:justify-between flex-col lg:flex-row">
+      <div className=" mx-10 flex items-center flex-col mb-20 lg:mb-0">
         <div className="my-5">
           <h1 className="text-2xl ml-10 font-bold"> {restaurant.name} </h1>
           <h1 className="text-md ml-10 font-serif">
@@ -39,7 +39,7 @@ const RestaurantInfo = () => {
         />
       </div>
       <div className="mx-10 boredr-l-2 border-l-slate-900 w-1/2]">
-        <h1 className="text-2xl font-bold">Menu</h1>
+        <h1 className="text-2xl font-bold border-b-2 border-b-pink-600 text-center mb-5 w-10">Menu</h1>
         <ul>
           {Object.values(restaurant?.menu?.items).map((item) => (
             <li key={item?.id}>{item?.name}</li>
