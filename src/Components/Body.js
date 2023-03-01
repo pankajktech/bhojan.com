@@ -24,12 +24,10 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6139391&lng=77.2090212&page_type=DESKTOP_WEB_LISTING";
     const response = await fetch(API_URL);
     const data = await response.json();
-    setAllRestaurants(data?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestaurants(data?.data?.cards[2]?.data?.data?.cards);
+    console.log(data);
+    setAllRestaurants(data.data?.cards[2]?.data?.data?.cards);
+    setFilteredRestaurants(data.data?.cards[2]?.data?.data?.cards);
   }
-
-  // if(!allRestaurants ===0) return null;
-  // if(filteredRestaurants.length===0) return notFound();
 
   return allRestaurants.length === 0 ? (
     <Shimmer />
@@ -60,8 +58,11 @@ const Body = () => {
       <div className="flex flex-wrap justify-center xl:mx-10 min-h-[75vh]">
         {filteredRestaurants.map((restaurant) => {
           return (
-            <Link to={/restaurant/ + restaurant.data.id}>
-              <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
+            <Link
+              to={/restaurant/ + restaurant.data.id}
+              key={restaurant.data.id}
+            >
+              <RestaurantCard {...restaurant.data} />
             </Link>
           );
         })}

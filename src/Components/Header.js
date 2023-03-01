@@ -9,7 +9,7 @@ const Header = () => {
     <>
       <div className="bg-slate-900 bg-opacity-80 text-slate-100 shadow-sm flex lg:justify-around items-center sticky top-0 z-10 p-3 backdrop-blur-md">
         <div className="flex flex-row justify-center items-center">
-          <Link href="/">
+          <Link to={"/"}>
             <img
               src="https://cdn-icons-png.flaticon.com/512/2276/2276931.png"
               className="h-12 w-12 mr-2"

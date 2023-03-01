@@ -4,12 +4,10 @@ const Shimmer = () => {
       {Array(4)
         .fill()
         .map((e, index) => (
-          <>
-            <div
-              key={index}
-              className="bg-slate-300 m-10 w-72 h-96 animate-pulse"
-            ></div>
-          </>
+          <div
+            key={index}
+            className="bg-slate-300 m-10 w-72 h-96 animate-pulse"
+          ></div>
         ))}
     </div>
   );
