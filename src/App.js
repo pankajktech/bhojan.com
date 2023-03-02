@@ -6,7 +6,6 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Aboutme from "./Components/About.js";
 import Error from "./Components/Error.js";
 import Contact from "./Components/Contact.js";
-import Signin from "./Components/Signin.js";
 import RestaurantInfo from "./Components/RestaurantInfo.js";
 
 function SwiggyPage() {
@@ -39,13 +38,9 @@ const appRouter = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "/Signin",
-        element: <Signin />,
-      },
-      {
         path: "/restaurant/:resId",
         element: <RestaurantInfo />,
-      }
+      },
     ],
   },
 ]);

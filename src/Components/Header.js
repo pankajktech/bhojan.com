@@ -14,29 +14,28 @@ const Header = () => {
               src="https://cdn-icons-png.flaticon.com/512/2276/2276931.png"
               className="h-12 w-12 mr-2"
             />
-            </Link>
-            {/* <h1 className=" text-md lg:text-lg max-md:hidden">Bhojan.com</h1> */}
-  
+          </Link>
+          {/* <h1 className=" text-md lg:text-lg max-md:hidden">Bhojan.com</h1> */}
         </div>
 
         <ul className="cursor-pointer flex ">
-          <li className="mx-2 lg:mx-8 text-md hover:animate-pulse  hover:text-pink-400 font-bold duration-500">
+          <li className="mx-2 lg:mx-5 text-md hover:border-b p-1 font-bold ">
             <Link to="/">Home</Link>
           </li>
-          <li className="mx-2 lg:mx-8 text-md hover:animate-pulse  hover:text-pink-400 font-bold duration-500">
-            <Link to="/Aboutme">About Me</Link>
+          <li className="mx-2 lg:mx-5 text-md  hover:border-b p-1 font-bold ">
+            <Link to="/Aboutme">Aboue</Link>
           </li>
-          <li className="mx-2 lg:mx-8 text-md hover:animate-pulse  hover:text-pink-400 font-bold duration-500">
+          <li className="mx-2 lg:mx-5 text-md hover:border-b p-1 font-bold ">
             <Link to="/Contact">Contact</Link>
           </li>
-          <li className="mx-4 text-md  hover:animate-pulse  hover:text-pink-400 font-bold duration-500">
+          <li className="mx-4 text-md   hover:border-b p-1 font-bold ">
             {/* <i className="mx-1 fa-regular fa-user text-slate-900"></i> */}
 
             {signedin ? (
-              <button onClick={() => setSignedin(false)}>Sign Out</button>
+              <button onClick={() => setSignedin(false)}>Log Out</button>
             ) : (
               <button onClick={() => setSignedin(true)}>
-                <Link to="/Signin">Sign In </Link>
+               Log In
               </button>
             )}
           </li>
