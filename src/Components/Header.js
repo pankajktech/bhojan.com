@@ -28,6 +28,9 @@ const Header = () => {
           <li className="mx-2 lg:mx-5 text-md hover:border-b p-1 font-bold ">
             <Link to="/Contact">Contact</Link>
           </li>
+          <li className="mx-2 lg:mx-5 text-md hover:text-slate-300 p-1 font-bold ">
+          <i class="fa-solid fa-cart-plus"></i>
+          </li>
           <li className="mx-4 text-md   hover:border-b p-1 font-bold ">
             {/* <i className="mx-1 fa-regular fa-user text-slate-900"></i> */}
 

@@ -29,21 +29,20 @@ const Body = () => {
     setFilteredRestaurants(data.data?.cards[2]?.data?.data?.cards);
   }
 
-  return allRestaurants.length === 0 ? (
+  return (allRestaurants.length) === 0 ? (
     <Shimmer />
   ) : (
     <>
-      <div className="flex items-center justify-center my-5">
+      <div className="flex items-center justify-center  relative before:bg-[url('https://images.unsplash.com/photo-1596776572010-93e181f9fc07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] before:absolute before:object-cover before:bg-center h-32 lg:h-72 before:blur-sm before:-z-10 before:h-[100%] before:w-[100%]">
         <input
           type="text"
           name="search"
           value={searchText}
           autoFocus
           placeholder="Search For Restaurant ..."
-          className="border border-gray-light focus:border-2 focus:border-slate-800 px-6 h-12 focus:outline-none focus:shadow-lg w-[70%] lg:w-[45%] rounded-full"
+          className="border border-gray-light focus:border px-6 h-12 focus:outline-none focus:shadow-lg w-[70%] lg:w-[45%] rounded-full"
           onChange={(e) => setSearchText(e.target.value)}
         />
-
         <button
           className=" bg-slate-900 text-white shadow-lg p-2 h-12 -m-6 lg:-m-18 rounded-r-full w-20 hover:bg-slate-700 "
           onClick={() => {

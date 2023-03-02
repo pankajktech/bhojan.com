@@ -26,12 +26,12 @@ const RestaurantInfo = () => {
     <Shimmer />
   ) : (
     <div className="flex items-center flex-col">
-      <div className="bg-slate-800 text-white flex justify-center w-full mb-20">
+      <div className="bg-slate-800 text-white flex max-md:flex-col justify-center w-full mb-20">
         <img
           src={IMG_CDN_LINK + restaurant.cloudinaryImageId}
-          className="h-[250px] w-[400px] p-5"
+          className="h-[300px] w-[400px] p-5"
         />
-        <div className="mt-10">
+        <div className="my-10">
           <h1 className="text-3xl ml-10 mb-4 font-bold text-pink-600">
             {restaurant.name}
           </h1>
@@ -39,9 +39,14 @@ const RestaurantInfo = () => {
             <i className="fa-regular fa-star fa-sm mr-1"></i>{" "}
             {restaurant.avgRating}
           </span>
-          <span className="text-md ml-10 font-serif text-center border-l-2 border-l-white px-4">
+          <span className="text-md ml-10  font-serif text-center border-l-2 border-l-white px-4">
             {restaurant.cuisines.join(" , ")}
           </span>
+          <p className="text-teal-600 ml-10 my-10">
+            Cost For Two:
+            <i className="fa-solid fa-indian-rupee-sign ml-3"></i>{" "}
+            {restaurant?.costForTwo / 100}
+          </p>
         </div>
       </div>
       <div className="mx-10 boredr-l-2 border-l-slate-900 lg:w-[40%]">
@@ -51,10 +56,14 @@ const RestaurantInfo = () => {
         <p className="mb-10">
           {Object.keys(restaurant?.menu?.items).length} Items
         </p>
+
         <div className="flex flex-col">
           {Object.values(restaurant?.menu?.items).map((item) => (
-            <div className=" border-b-2 border-b-slate-800 mb-4 flex justify-between" key={item?.id}>
-              <div className="">
+            <div
+              className=" border-b-2 border-b-slate-800 mb-4 flex justify-between"
+              key={item?.id}
+            >
+              <div className="w-[65%] lg:w-[60%]">
                 <h3 className="text-xl font-bold">{item?.name}</h3>
                 <p className="text-teal-600">
                   {item?.price > 0
@@ -64,17 +73,20 @@ const RestaurantInfo = () => {
                       }).format(item?.price / 100)
                     : " "}
                 </p>
-                <p className="m-3 opacity-50">{item?.description}</p>
+                <p className="my-3 opacity-50">{item?.description}</p>
+                <button className=" bg-orange-900 hover:bg-orange-700 w-36 text-white my-5 py-2">
+                  Add to Cart{" "}
+                </button>
               </div>
               <div className="mb-5">
                 {item?.cloudinaryImageId && (
                   <img
-                    className="w-32 h-32"
+                    className="h-[150px] w-[200px]  "
                     src={ITEM_IMG_CDN_URL + item?.cloudinaryImageId}
                     alt={item?.name}
                   />
                 )}
-                <button className=" bg-green-800 w-32 text-white my-3"> Add to Cart </button>
+               
               </div>
             </div>
           ))}
