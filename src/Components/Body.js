@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
 import RestaurantCard from "./RestaurantCard";
 import { Link } from "react-router-dom";
-// import notFound from "./notFound.js";
 
 function filterData(searchText, allRestaurants) {
   return allRestaurants.filter((restaurant) =>
@@ -29,11 +28,11 @@ const Body = () => {
     setFilteredRestaurants(data.data?.cards[2]?.data?.data?.cards);
   }
 
-  return (allRestaurants.length) === 0 ? (
+  return allRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <>
-      <div className="flex items-center justify-center  relative before:bg-[url('https://images.unsplash.com/photo-1596776572010-93e181f9fc07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] before:absolute before:object-cover before:bg-center h-32 lg:h-72 before:blur-sm before:-z-10 before:h-[100%] before:w-[100%]">
+      <div className="flex items-center justify-center  relative before:bg-[url('https://images.unsplash.com/photo-1596776572010-93e181f9fc07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] before:absolute before:object-cover before:bg-center max-md:before:hidden lg:h-72 before:blur-sm before:-z-10 lg:before:-top-20 before:h-[100%] before:w-[100%]">
         <input
           type="text"
           name="search"
@@ -44,7 +43,7 @@ const Body = () => {
           onChange={(e) => setSearchText(e.target.value)}
         />
         <button
-          className=" bg-slate-900 text-white shadow-lg p-2 h-12 -m-6 lg:-m-18 rounded-r-full w-20 hover:bg-slate-700 "
+          className=" bg-slate-900 text-white shadow-lg p-2 h-12 -mx-6 lg:-mx-18 rounded-r-full w-20 hover:bg-slate-700 "
           onClick={() => {
             const data = filterData(searchText, allRestaurants);
             setFilteredRestaurants(data);
@@ -54,7 +53,7 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="flex flex-wrap justify-center xl:mx-10 min-h-[75vh]">
+      <div className="grid lg:grid-cols-4 items-center xl:mx-10 min-h-[95vh]">
         {filteredRestaurants.map((restaurant) => {
           return (
             <Link

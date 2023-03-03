@@ -79,14 +79,11 @@ const RestaurantInfo = () => {
                 </button>
               </div>
               <div className="mb-5">
-                {item?.cloudinaryImageId && (
-                  <img
-                    className="h-[150px] w-[200px]  "
-                    src={ITEM_IMG_CDN_URL + item?.cloudinaryImageId}
-                    alt={item?.name}
-                  />
-                )}
-               
+                <img
+                  className="h-[150px] w-[200px]  "
+                  src={ITEM_IMG_CDN_URL + item?.cloudinaryImageId}
+                  alt={item?.name}
+                />
               </div>
             </div>
           ))}

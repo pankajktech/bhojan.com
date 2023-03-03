@@ -27233,7 +27233,7 @@ const Header = ()=>{
     const [signedin, setSignedin] = (0, _react.useState)(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "bg-slate-900 bg-opacity-80 text-slate-100 shadow-sm flex lg:justify-around items-center sticky top-0 z-10 p-3 backdrop-blur-md",
+            className: "bg-slate-900 bg-opacity-50 text-slate-100 shadow-sm flex lg:justify-around items-center sticky top-0 z-10 p-3 backdrop-blur-md",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "flex flex-row justify-center items-center",
@@ -32584,7 +32584,6 @@ var _restaurantCard = require("./RestaurantCard");
 var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
 var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
-// import notFound from "./notFound.js";
 function filterData(searchText, allRestaurants) {
     return allRestaurants.filter((restaurant)=>restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase()));
 }
@@ -32606,12 +32605,12 @@ const Body = ()=>{
     }
     return allRestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsDefault.default), {}, void 0, false, {
         fileName: "src/Components/Body.js",
-        lineNumber: 33,
+        lineNumber: 32,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex items-center justify-center relative before:bg-[url('https://images.unsplash.com/photo-1596776572010-93e181f9fc07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] before:absolute before:object-cover before:bg-center h-32 lg:h-72 before:blur-sm before:-z-10 before:h-[100%] before:w-[100%]",
+                className: "flex items-center justify-center relative before:bg-[url('https://images.unsplash.com/photo-1596776572010-93e181f9fc07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] before:absolute before:object-cover before:bg-center max-md:before:hidden lg:h-72 before:blur-sm before:-z-10 lg:before:-top-20 before:h-[100%] before:w-[100%]",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "text",
@@ -32623,11 +32622,11 @@ const Body = ()=>{
                         onChange: (e)=>setSearchText(e.target.value)
                     }, void 0, false, {
                         fileName: "src/Components/Body.js",
-                        lineNumber: 37,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: " bg-slate-900 text-white shadow-lg p-2 h-12 -m-6 lg:-m-18 rounded-r-full w-20 hover:bg-slate-700 ",
+                        className: " bg-slate-900 text-white shadow-lg p-2 h-12 -mx-6 lg:-mx-18 rounded-r-full w-20 hover:bg-slate-700 ",
                         onClick: ()=>{
                             const data = filterData(searchText, allRestaurants);
                             setFilteredRestaurants(data);
@@ -32636,22 +32635,22 @@ const Body = ()=>{
                             className: "fa-solid fa-magnifying-glass mr-2"
                         }, void 0, false, {
                             fileName: "src/Components/Body.js",
-                            lineNumber: 53,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Body.js",
-                        lineNumber: 46,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Body.js",
-                lineNumber: 36,
+                lineNumber: 35,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-wrap justify-center xl:mx-10 min-h-[75vh]",
+                className: "grid lg:grid-cols-4 items-center xl:mx-10 min-h-[95vh]",
                 children: filteredRestaurants.map((restaurant)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: /restaurant/ + restaurant.data.id,
@@ -32659,18 +32658,18 @@ const Body = ()=>{
                             ...restaurant.data
                         }, void 0, false, {
                             fileName: "src/Components/Body.js",
-                            lineNumber: 64,
+                            lineNumber: 63,
                             columnNumber: 15
                         }, undefined)
                     }, restaurant.data.id, false, {
                         fileName: "src/Components/Body.js",
-                        lineNumber: 60,
+                        lineNumber: 59,
                         columnNumber: 13
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/Components/Body.js",
-                lineNumber: 57,
+                lineNumber: 56,
                 columnNumber: 7
             }, undefined)
         ]
@@ -32836,7 +32835,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "IMG_CDN_LINK", ()=>IMG_CDN_LINK);
 parcelHelpers.export(exports, "ITEM_IMG_CDN_URL", ()=>ITEM_IMG_CDN_URL);
 const IMG_CDN_LINK = "https://res.cloudinary.com/swiggy/image/upload/";
-const ITEM_IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/"; // export const Search_BG_URL = "https://images.unsplash.com/photo-1596776572010-93e181f9fc07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
+const ITEM_IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"19tXb":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$06db = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -33581,14 +33580,14 @@ const RestaurantInfo = ()=>{
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "mb-5",
-                                        children: item?.cloudinaryImageId && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                             className: "h-[150px] w-[200px] ",
                                             src: (0, _contents.ITEM_IMG_CDN_URL) + item?.cloudinaryImageId,
                                             alt: item?.name
                                         }, void 0, false, {
                                             fileName: "src/Components/RestaurantInfo.js",
-                                            lineNumber: 83,
-                                            columnNumber: 19
+                                            lineNumber: 82,
+                                            columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/Components/RestaurantInfo.js",

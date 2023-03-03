@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="bg-slate-900 bg-opacity-80 text-slate-100 shadow-sm flex lg:justify-around items-center sticky top-0 z-10 p-3 backdrop-blur-md">
+      <div className="bg-slate-900 bg-opacity-50 text-slate-100 shadow-sm flex lg:justify-around items-center sticky top-0 z-10 p-3 backdrop-blur-md">
         <div className="flex flex-row justify-center items-center">
           <Link to={"/"}>
             <img
