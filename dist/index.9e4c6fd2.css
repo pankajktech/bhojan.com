@@ -263,6 +263,10 @@ img, video {
   margin: .75rem;
 }
 
+.-m-6 {
+  margin: -1.5rem;
+}
+
 .-mx-6 {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
@@ -384,16 +388,12 @@ img, video {
   margin-top: .25rem;
 }
 
-.mt-auto {
-  margin-top: auto;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .block {
@@ -440,16 +440,20 @@ img, video {
   height: auto;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
 .min-h-\[76vh\] {
   min-height: 76vh;
 }
 
-.min-h-\[95vh\] {
-  min-height: 95vh;
-}
-
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-\[75vh\] {
+  min-height: 75vh;
 }
 
 .w-10 {
@@ -975,12 +979,6 @@ img, video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.before\:blur-md:before {
-  content: var(--tw-content);
-  --tw-blur: blur(12px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .hover\:-translate-y-3:hover {
   --tw-translate-y: -.75rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1156,20 +1154,16 @@ img, video {
     margin-right: 2.5rem;
   }
 
-  .lg\:h-72 {
-    height: 18rem;
+  .lg\:h-80 {
+    height: 20rem;
   }
 
   .lg\:h-\[700px\] {
     height: 700px;
   }
 
-  .lg\:h-80 {
-    height: 20rem;
-  }
-
-  .lg\:h-96 {
-    height: 24rem;
+  .lg\:h-72 {
+    height: 18rem;
   }
 
   .lg\:w-1\/2 {
@@ -1180,20 +1174,20 @@ img, video {
     width: 13rem;
   }
 
-  .lg\:w-\[40\%\] {
-    width: 40%;
+  .lg\:w-\[25\%\] {
+    width: 25%;
   }
 
-  .lg\:w-\[45\%\] {
-    width: 45%;
+  .lg\:w-\[40\%\] {
+    width: 40%;
   }
 
   .lg\:w-\[60\%\] {
     width: 60%;
   }
 
-  .lg\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .lg\:w-\[45\%\] {
+    width: 45%;
   }
 
   .lg\:justify-around {
@@ -1233,14 +1227,14 @@ img, video {
     margin: 1.25rem;
   }
 
-  .xl\:mx-10 {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-  }
-
   .xl\:mx-52 {
     margin-left: 13rem;
     margin-right: 13rem;
+  }
+
+  .xl\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
 
   .xl\:min-h-screen {

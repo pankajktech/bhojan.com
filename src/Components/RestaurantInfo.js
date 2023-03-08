@@ -2,11 +2,11 @@ import { useParams } from "react-router-dom";
 import { IMG_CDN_LINK } from "../Contents";
 import { ITEM_IMG_CDN_URL } from "../Contents";
 import Shimmer from "./Shimmer.js";
-import useMenuCardAPI  from "../Utils/useMenuCardAPI.js";
+import useMenuCardAPI from "../Utils/useMenuCardAPI.js";
 
 const RestaurantInfo = () => {
   const { resId } = useParams();
-  
+
   const restaurant = useMenuCardAPI(resId);
 
   return !restaurant ? (

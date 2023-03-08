@@ -2,9 +2,12 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
 import RestaurantCard from "./RestaurantCard";
 import { Link } from "react-router-dom";
-import useSearch from "../Utils/useSearch.js";
 
-
+function filterData(searchText, allRestaurants) {
+  return allRestaurants.filter((restaurant) =>
+    restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase())
+  );
+}
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -17,7 +20,7 @@ const Body = () => {
 
   async function fetchRestaurants() {
     const API_URL =
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING";
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6139391&lng=77.2090212&page_type=DESKTOP_WEB_LISTING";
     const response = await fetch(API_URL);
     const data = await response.json();
     console.log(data);
@@ -29,20 +32,20 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="flex justify-center  relative before:bg-[url('https://images.unsplash.com/photo-1596776572010-93e181f9fc07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] before:absolute before:object-cover before:bg-center max-md:before:hidden  lg:h-80 before:blur-sm before:-z-10 lg:before:-top-20 before:h-[100%] before:w-[100%]">
+      <div className="flex items-center justify-center  relative before:bg-[url('https://images.unsplash.com/photo-1596776572010-93e181f9fc07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] before:absolute before:object-cover before:bg-center h-32 lg:h-72 before:blur-sm before:-z-10 before:h-[100%] before:w-[100%]">
         <input
           type="text"
           name="search"
           value={searchText}
           autoFocus
           placeholder="Search For Restaurant ..."
-          className="border border-gray-light focus:border px-6 h-12 focus:outline-none focus:shadow-lg w-[70%] lg:w-[45%] mt-20 rounded-full"
+          className="border border-gray-light focus:border px-6 h-12 focus:outline-none focus:shadow-lg w-[70%] lg:w-[45%] rounded-full"
           onChange={(e) => setSearchText(e.target.value)}
         />
         <button
-          className=" bg-slate-900 text-white shadow-lg p-2 h-12 -mx-6 lg:-mx-18 rounded-r-full w-20 hover:bg-slate-700  mt-20"
+          className=" bg-slate-900 text-white shadow-lg p-2 h-12 -m-6 lg:-m-18 rounded-r-full w-20 hover:bg-slate-700 "
           onClick={() => {
-            const data = useSearch(searchText, allRestaurants);
+            const data = filterData(searchText, allRestaurants);
             setFilteredRestaurants(data);
           }}
         >
@@ -50,7 +53,7 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="grid md:grid-cols-3 xl:grid-cols-4 place-items-center mx-auto">
+      <div className="flex flex-wrap justify-center xl:mx-10 min-h-[75vh]">
         {filteredRestaurants.map((restaurant) => {
           return (
             <Link
