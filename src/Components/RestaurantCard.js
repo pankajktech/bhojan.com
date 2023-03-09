@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { IMG_CDN_LINK } from "../Contents";
 
 const RestaurantCard = ({
@@ -9,7 +8,7 @@ const RestaurantCard = ({
   deliveryTime,
 }) => {
   return (
-    <div className="m-10 w-80 h-96 overflow-clip bg-white shadow-xl hover:-translate-y-3 duration-500">
+    <div className="m-8 w-80 h-96 overflow-clip bg-white shadow-xl hover:-translate-y-3 duration-500">
       <img src={IMG_CDN_LINK + cloudinaryImageId} className="w-80 h-52 mb-2" />
       <div className="p-3">
         <h1 className="text-xl text-sky-800 font-bold "> {name} </h1>
