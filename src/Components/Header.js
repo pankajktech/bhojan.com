@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="bg-slate-900 bg-opacity-50 text-slate-100 shadow-sm flex lg:justify-around items-center sticky top-0 z-10 p-3 backdrop-blur-md">
+      <div className="bg-slate-900 text-slate-100 shadow-sm shadow-slate-100 flex lg:justify-around items-center sticky top-0 z-10 p-3">
         <div className="flex flex-row justify-center items-center">
           <Link to={"/"}>
             <img
@@ -23,7 +23,7 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="mx-2 lg:mx-5 text-md  hover:border-b p-1 font-bold ">
-            <Link to="/Aboutme">Aboue</Link>
+            <Link to="/Aboutme">About</Link>
           </li>
           <li className="mx-2 lg:mx-5 text-md hover:border-b p-1 font-bold ">
             <Link to="/Contact">Contact</Link>
