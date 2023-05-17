@@ -26,9 +26,9 @@ const RestaurantInfo = () => {
             <i className="fa-regular fa-star fa-sm mr-1"></i>{" "}
             {restaurant.avgRating}
           </span>
-          <span className="text-md ml-10  font-serif text-center border-l-2 border-l-white px-4">
+          {/* <span className="text-md ml-10  font-serif text-center border-l-2 border-l-white px-4">
             {restaurant.cuisines.join(" , ")}
-          </span>
+          </span> */}
           <p className="text-teal-600 ml-10 my-10">
             Cost For Two:
             <i className="fa-solid fa-indian-rupee-sign ml-3"></i>{" "}
@@ -40,11 +40,11 @@ const RestaurantInfo = () => {
         <h1 className="text-2xl font-bold border-b-2 border-b-pink-600 text-center mb-2 w-10">
           Menu
         </h1>
-        <p className="mb-10">
+        {/* <p className="mb-10">
           {Object.keys(restaurant?.menu?.items).length} Items
-        </p>
+        </p> */}
 
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           {Object.values(restaurant?.menu?.items).map((item) => (
             <div
               className=" border-b-2 border-b-slate-800 mb-4 flex justify-between"
@@ -74,7 +74,7 @@ const RestaurantInfo = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

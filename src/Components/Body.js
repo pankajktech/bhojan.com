@@ -13,22 +13,22 @@ const Body = () => {
     fetchRestaurants();
   }, []);
 
-  async function fetchRestaurants() {
+  const fetchRestaurants = async () => {
     const API_URL =
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING";
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&page_type=DESKTOP_WEB_LISTING";
     const response = await fetch(API_URL);
     const data = await response.json();
     console.log(data);
     setAllRestaurants(data.data?.cards[2]?.data?.data?.cards);
     setFilteredRestaurants(data.data?.cards[2]?.data?.data?.cards);
-  }
+  };
 
   return allRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <>
-      <div className="bg-gradient-to-b from-slate-900 to-indigo-900">
-        <div className="flex justify-center shadow shadow-slate-100">
+      <div className="">
+        {/* <div className="flex justify-center shadow shadow-slate-100">
           <input
             type="text"
             name="search"
@@ -46,9 +46,9 @@ const Body = () => {
           >
             <i className="fa-solid fa-magnifying-glass fa-lg mr-2"></i>
           </button>
-        </div>
+        </div> */}
 
-        <div className="flex flex-wrap justify-center xl:mx-10 min-h-[75vh]">
+        <div className="flex flex-wrap gap-10 my-10 justify-center">
           {filteredRestaurants.map((restaurant) => {
             return (
               <Link
