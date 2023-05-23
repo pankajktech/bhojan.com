@@ -28,25 +28,38 @@ const Body = () => {
   ) : (
     <>
       <div className="">
-        {/* <div className="flex justify-center shadow shadow-slate-100">
+        <div className="flex justify-center shadow shadow-slate-100">
           <input
             type="text"
             name="search"
             value={searchText}
             placeholder="Search For Restaurant ..."
-            className="border border-gray-light focus:border px-6 h-12 focus:outline-none focus:shadow-lg w-[70%] lg:w-[35%] my-10 rounded-full"
+            className=" ring-1 ring-gray-500 focus:bg-gray-100 focus:outline-none px-6 h-12 focus:ring-black  w-[70%] lg:w-[35%] my-10 rounded-full"
             onChange={(e) => setSearchText(e.target.value)}
           />
           <button
-            className="bg-slate-900 text-white shadow-lg p-2 h-12 -m-6 lg:-mx-20 rounded-r-full w-20 my-10 hover:bg-slate-700 "
+            className="p-2 shadow-sm h-12 -m-6 lg:-mx-12 rounded-r-full w-10 my-10"
             onClick={() => {
               const data = useSearch(searchText, allRestaurants);
               setFilteredRestaurants(data);
             }}
           >
-            <i className="fa-solid fa-magnifying-glass fa-lg mr-2"></i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
           </button>
-        </div> */}
+        </div>
 
         <div className="flex flex-wrap gap-10 my-10 justify-center">
           {filteredRestaurants.map((restaurant) => {
