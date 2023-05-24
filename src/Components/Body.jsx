@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Shimmer from "./Shimmer.js";
-import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer.jsx";
+import RestaurantCard from "./RestaurantCard.jsx";
 import { Link } from "react-router-dom";
 import useSearch from "../Utils/useSearch.js";
 

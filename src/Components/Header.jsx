@@ -15,9 +15,9 @@ const Header = () => {
               />
             </Link>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 cursor-pointer">
             <div className="block shrink-0 rounded-full bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700">
-              <AiOutlineShoppingCart />
+              <AiOutlineShoppingCart className="h-6 w-6" />
             </div>
 
             <div className="block shrink-0 rounded-full bg-white p-2.5">
