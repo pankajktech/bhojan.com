@@ -23,6 +23,11 @@ const Body = () => {
     setFilteredRestaurants(data.data?.cards[2]?.data?.data?.cards);
   };
 
+  useEffect(() => {
+    const data = useSearch(searchText, allRestaurants);
+    setFilteredRestaurants(data);
+  }, [searchText, allRestaurants]);
+
   return allRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
@@ -40,8 +45,8 @@ const Body = () => {
           <button
             className="p-2 shadow-sm h-12 -m-6 lg:-mx-12 rounded-r-full w-10 my-10"
             onClick={() => {
-              const data = useSearch(searchText, allRestaurants);
-              setFilteredRestaurants(data);
+              setSearchText("");
+              setFilteredRestaurants(allRestaurants);
             }}
           >
             <svg
@@ -50,11 +55,11 @@ const Body = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
@@ -65,7 +70,7 @@ const Body = () => {
           {filteredRestaurants.map((restaurant) => {
             return (
               <Link
-                to={/restaurant/ + restaurant.data.id}
+                to={`/restaurant/` + restaurant.data.id}
                 key={restaurant.data.id}
               >
                 <RestaurantCard {...restaurant.data} />
