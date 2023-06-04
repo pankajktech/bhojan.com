@@ -36,17 +36,17 @@ const Body = () => {
             name="search"
             value={searchText}
             placeholder="Search For Restaurant ..."
-            className=" ring-1 ring-gray-500 focus:bg-gray-100 focus:outline-none px-6 h-12 focus:ring-black  w-[70%] lg:w-[35%] my-10 rounded-full"
+            className=" ring-1 ring-gray-500 focus:bg-gray-100 focus:outline-none px-6 h-12 focus:ring-black  w-[90%] lg:w-[35%] my-10 rounded-full"
             onChange={(e) => setSearchText(e.target.value)}
           />
           <button
-            className="p-2 shadow-sm h-12 -m-6 lg:-mx-12 rounded-r-full w-10 my-10"
+            className="p-2 rounded-r-full my-10"
             onClick={() => {
               setSearchText("");
               setFilteredRestaurants(allRestaurants);
             }}
           >
-            <AiOutlineSearch className="h-6 w-6 text-gray-600" />
+            <AiOutlineSearch className="h-6 w-6 z-10 -mx-10 text-gray-800" />
           </button>
         </div>
 

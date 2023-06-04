@@ -8,20 +8,21 @@ import { addItem } from "../Redux/cartSlice";
 
 const RestaurantInfo = () => {
   const { resId } = useParams();
-
   const dispatch = useDispatch();
-
-  const addFoodItem = (item) => {
-    dispatch(addItem(item));
-  };
-
   const restaurant = useMenuCardAPI(resId);
 
+  // Get The Restaurant Info From The API
   const ResInfo = restaurant?.cards[0]?.card?.card?.info;
 
+  // Get The Restaurant's Menu From The API
   const itemCards =
     restaurant?.cards[2].groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
       ?.card?.itemCards;
+
+  // Add Item To The Cart
+  const addFoodItem = (item) => {
+    dispatch(addItem(item));
+  };
 
   return !restaurant ? (
     <Shimmer />
@@ -32,21 +33,18 @@ const RestaurantInfo = () => {
           src={IMG_CDN_LINK + ResInfo?.cloudinaryImageId}
           className="h-[300px] w-[400px] p-5"
         />
-        <div className="my-10">
-          <h1 className="text-3xl ml-10 mb-4 font-bold text-pink-600">
+        <div className="my-10 ">
+          <h1 className="text-3xl ml-10 mb-4 font-bold text-slate-100">
             {ResInfo?.name}
           </h1>
-          <span className="text-sm ml-10 font-serif text-center bg-green-800 text-white p-2 w-20">
-            <i className="fa-regular fa-star fa-sm mr-1"></i>{" "}
-            {ResInfo?.avgRating}
+          <span className="text-sm ml-10 font-serif text-center bg-slate-100 text-slate-900 p-2 w-20">
+            {ResInfo?.avgRating} ⭐
           </span>
-          <span className="text-md ml-10  font-serif text-center border-l-2 border-l-white px-4">
-            {ResInfo?.cuisines?.join(" , ")}
+          <span className="text-md ml-2  font-serif text-center border-l-2 border-l-white px-2">
+            {ResInfo?.totalRatingsString}
           </span>
-          <p className="text-teal-600 ml-10 my-10">
-            Cost For Two:
-            <i className="fa-solid fa-indian-rupee-sign ml-3"></i>{" "}
-            {ResInfo?.costForTwo / 100}
+          <p className="text-sm font-serif ml-10 my-5">
+            {ResInfo?.cuisines.join(", ")}
           </p>
         </div>
       </div>

@@ -1,15 +1,13 @@
 import React from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 import { useSelector } from "react-redux";
 
 const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
 
   const navigate = useNavigate();
-
   const cartItemsDetails = () => {
     if (cartItems.length > 0) {
       navigate("/cart");
@@ -28,8 +26,8 @@ const Header = () => {
               />
             </Link>
           </div>
-          <div className="flex items-center gap-3 cursor-pointer">
-            <div className="block shrink-0 relative rounded-full bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700">
+          <div className="flex items-center gap-5">
+            <div className="block shrink-0 relative rounded-full bg-white p-2.5 text-gray-600 shadow-sm hover:bg-slate-200 cursor-pointer">
               <AiOutlineShoppingCart
                 className="h-6 w-6"
                 onClick={() => cartItemsDetails()}
@@ -39,7 +37,7 @@ const Header = () => {
               </span>
             </div>
 
-            <div className="block shrink-0 rounded-full bg-white p-2.5">
+            <div className="block shrink-0 rounded-full bg-white p-2.5 cursor-pointer hover:bg-slate-200">
               <AiOutlineUser className="h-6 w-6 text-gray-600" />
             </div>
           </div>
