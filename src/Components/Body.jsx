@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.jsx";
 import RestaurantCard from "./RestaurantCard.jsx";
-import { Link } from "react-router-dom";
 import useSearch from "../Utils/useSearch.js";
+import { AiOutlineSearch } from "react-icons/ai";
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -15,10 +15,9 @@ const Body = () => {
 
   const fetchRestaurants = async () => {
     const API_URL =
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&page_type=DESKTOP_WEB_LISTING";
+      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING";
     const response = await fetch(API_URL);
     const data = await response.json();
-    console.log(data);
     setAllRestaurants(data.data?.cards[2]?.data?.data?.cards);
     setFilteredRestaurants(data.data?.cards[2]?.data?.data?.cards);
   };
@@ -28,9 +27,7 @@ const Body = () => {
     setFilteredRestaurants(data);
   }, [searchText, allRestaurants]);
 
-  return allRestaurants.length === 0 ? (
-    <Shimmer />
-  ) : (
+  return (
     <>
       <div className="">
         <div className="flex justify-center shadow shadow-slate-100">
@@ -49,35 +46,24 @@ const Body = () => {
               setFilteredRestaurants(allRestaurants);
             }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
+            <AiOutlineSearch className="h-6 w-6 text-gray-600" />
           </button>
         </div>
 
-        <div className="flex flex-wrap gap-10 my-10 justify-center">
-          {filteredRestaurants.map((restaurant) => {
-            return (
-              <Link
-                to={`/restaurant/` + restaurant.data.id}
-                key={restaurant.data.id}
-              >
-                <RestaurantCard {...restaurant.data} />
-              </Link>
-            );
-          })}
-        </div>
+        {allRestaurants.length === 0 ? (
+          <Shimmer />
+        ) : (
+          <div className="flex flex-wrap gap-10 my-10 justify-center">
+            {filteredRestaurants.map((restaurant) => {
+              return (
+                <RestaurantCard
+                  key={restaurant.data?.id}
+                  {...restaurant.data}
+                />
+              );
+            })}
+          </div>
+        )}
       </div>
     </>
   );

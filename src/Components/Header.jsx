@@ -1,10 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
+import { useSelector } from "react-redux";
+
 const Header = () => {
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
+
+  const navigate = useNavigate();
+
+  const cartItemsDetails = () => {
+    if (cartItems.length > 0) {
+      navigate("/cart");
+    }
+  };
+
   return (
-    <header className="bg-gray-100 sticky backdrop-blur-md top-0 z-50">
+    <header className="bg-gray-100 sticky backdrop-blur-md bg-opacity-50 top-0 z-50">
       <div className="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           <div className="flex flex-row justify-center items-center">
@@ -16,8 +29,14 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex items-center gap-3 cursor-pointer">
-            <div className="block shrink-0 rounded-full bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700">
-              <AiOutlineShoppingCart className="h-6 w-6" />
+            <div className="block shrink-0 relative rounded-full bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700">
+              <AiOutlineShoppingCart
+                className="h-6 w-6"
+                onClick={() => cartItemsDetails()}
+              />
+              <span className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full px-1 text-xs">
+                {cartItems.length}
+              </span>
             </div>
 
             <div className="block shrink-0 rounded-full bg-white p-2.5">

@@ -1,12 +1,12 @@
 const Shimmer = () => {
   return (
-    <div className="flex flex-wrap justify-center items-center min-h-screen">
-      {Array(4)
+    <div className="flex flex-wrap gap-10 my-10 justify-center">
+      {Array(8)
         .fill()
         .map((e, index) => (
           <div
             key={index}
-            className="bg-slate-300 m-10 w-72 h-96 animate-pulse"
+            className="w-80 h-80 bg-slate-200 animate-pulse rounded-md"
           ></div>
         ))}
     </div>

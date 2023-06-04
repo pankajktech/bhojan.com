@@ -4,14 +4,17 @@ import Body from "./Components/Body.jsx";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Error from "./Components/Error.jsx";
 import RestaurantInfo from "./Components/RestaurantInfo.jsx";
+import { Provider } from "react-redux";
+import cart from "./Redux/store.js";
+import CartItems from "./Components/CartItems.jsx";
 
 const SwiggyPage = () => {
   return (
-    <>
+    <Provider store={cart}>
       <Header />
       <Outlet />
       <Footer />
-    </>
+    </Provider>
   );
 };
 
@@ -28,6 +31,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:resId",
         element: <RestaurantInfo />,
+      },
+      {
+        path: "/cart",
+        element: <CartItems />,
       },
     ],
   },
