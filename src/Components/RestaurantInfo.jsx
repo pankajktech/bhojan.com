@@ -5,6 +5,8 @@ import useMenuCardAPI from "../Utils/useMenuCardAPI.js";
 import { FaCartArrowDown } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addItem } from "../Redux/cartSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const RestaurantInfo = () => {
   const { resId } = useParams();
@@ -22,6 +24,16 @@ const RestaurantInfo = () => {
   // Add Item To The Cart
   const addFoodItem = (item) => {
     dispatch(addItem(item));
+    toast("Item Added To Cart", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+    });
   };
 
   return !restaurant ? (
@@ -60,9 +72,9 @@ const RestaurantInfo = () => {
             {itemCards?.map((item) => (
               <div
                 key={item?.card?.info?.id}
-                className=" border-b-2 border-b-slate-800 mb-4 flex justify-between"
+                className=" border-b-2 border-b-slate-800 w-[90%] md:w-auto mb-4 flex flex-col-reverse md:flex-row md:justify-between"
               >
-                <div className="w-[65%] lg:w-[60%]">
+                <div className="w-[100%] lg:w-[60%]">
                   <h3 className="text-xl font-bold">
                     {item?.card?.info?.name}
                   </h3>
@@ -81,13 +93,14 @@ const RestaurantInfo = () => {
                     onClick={() => addFoodItem(item)}
                     className=" bg-gray-900 hover:bg-gray-800 w-36 flex items-center justify-center text-white my-5 py-2"
                   >
+                    <ToastContainer />
                     Add to Cart
                     <FaCartArrowDown className="ml-2" />
                   </button>
                 </div>
                 <div className="mb-5">
                   <img
-                    className="h-[150px] w-[200px]  "
+                    className="h-[150px] w-[100%] md:w-[200px]  "
                     src={IMG_CDN_LINK + item?.card?.info?.imageId}
                     alt={item?.card?.info?.name}
                   />

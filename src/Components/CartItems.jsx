@@ -3,29 +3,42 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearCart } from "../Redux/cartSlice";
 
 import { IMG_CDN_LINK } from "../Contents";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const CartItems = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((store) => store.cart.items);
 
   const clearCartItem = () => {
-    dispatch(clearCart());
+    if (cartItems.length > 0) {
+      dispatch(clearCart());
+      toast("Cart Cleared", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+      });
+    }
   };
 
   return (
-    <div className="flex flex-col items-center min-h-[84vh]">
+    <div className="flex flex-col items-center min-h-[84.3vh]">
       <h1 className="text-2xl font-bold border-b-2 border-b-pink-600 text-center mt-10 w-10">
         Cart
       </h1>
       <p className="mb-10">{cartItems?.length} Items</p>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col w-[90%] items-center">
         {cartItems?.map((item) => (
           <div
             key={item?.card?.info?.id}
-            className="border-b-2 border-b-slate-300 mb-4 flex justify-between w-[400px]"
+            className="border-b-2 border-b-slate-300 mb-4 flex flex-col-reverse md:flex-row justify-between w-[100%] md:w-[500px]"
           >
-            <div className="w-[65%] lg:w-[70%]">
-              <h3 className="font-bold">{item?.card?.info?.name}</h3>
+            <div className="w-[90%] lg:w-[60%]">
+              <h3 className="font-bold md:text-xl">{item?.card?.info?.name}</h3>
               <p className="text-teal-600">
                 {item?.card?.info?.price > 0
                   ? new Intl.NumberFormat("en-IN", {
@@ -45,7 +58,7 @@ const CartItems = () => {
             </div>
             <div className="mb-5">
               <img
-                className="h-[100px] w-[200px]"
+                className="h-[200px] w-[90%] md:w-[400px]"
                 src={IMG_CDN_LINK + item?.card?.info?.imageId}
                 alt={item?.card?.info?.name}
                 loading="lazy"
@@ -54,7 +67,7 @@ const CartItems = () => {
           </div>
         ))}
 
-        <div className="flex justify-between w-[400px]">
+        <div className="flex justify-between w-[90%] md:w-[500px]">
           <h1 className="font-bold">Total</h1>
           <h1 className="font-bold">
             {cartItems?.reduce((acc, item) => {
@@ -77,6 +90,7 @@ const CartItems = () => {
           onClick={() => clearCartItem()}
           className="bg-gray-900 hover:bg-gray-800 w-36 flex items-center justify-center text-white my-5 py-2"
         >
+          <ToastContainer />
           Clear Cart
         </button>
         <button className="bg-gray-900 hover:bg-gray-800 w-36 flex items-center justify-center text-white my-5 py-2 ml-5">
