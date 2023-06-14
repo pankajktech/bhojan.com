@@ -14,13 +14,7 @@ const CartItems = () => {
       dispatch(clearCart());
       toast("Cart Cleared", {
         position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false,
-        progress: undefined,
-        theme: "light",
+        autoClose: 1000,
       });
     }
   };
@@ -37,8 +31,8 @@ const CartItems = () => {
             key={item?.card?.info?.id}
             className="border-b-2 border-b-slate-300 mb-4 flex flex-col-reverse md:flex-row justify-between w-[100%] md:w-[500px]"
           >
-            <div className="w-[90%] lg:w-[60%]">
-              <h3 className="font-bold md:text-xl">{item?.card?.info?.name}</h3>
+            <div className="w-[90%] lg:w-[70%]">
+              <h3 className="font-bold">{item?.card?.info?.name}</h3>
               <p className="text-teal-600">
                 {item?.card?.info?.price > 0
                   ? new Intl.NumberFormat("en-IN", {
@@ -58,7 +52,7 @@ const CartItems = () => {
             </div>
             <div className="mb-5">
               <img
-                className="h-[200px] w-[90%] md:w-[400px]"
+                className="h-[150px] w-[90%] md:w-[250px]"
                 src={IMG_CDN_LINK + item?.card?.info?.imageId}
                 alt={item?.card?.info?.name}
                 loading="lazy"

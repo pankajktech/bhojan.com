@@ -26,13 +26,7 @@ const RestaurantInfo = () => {
     dispatch(addItem(item));
     toast("Item Added To Cart", {
       position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: false,
-      progress: undefined,
-      theme: "light",
+      autoClose: 1000,
     });
   };
 
@@ -69,6 +63,7 @@ const RestaurantInfo = () => {
         </p>
         {
           <div className="flex flex-col">
+            <ToastContainer />
             {itemCards?.map((item) => (
               <div
                 key={item?.card?.info?.id}
@@ -93,7 +88,6 @@ const RestaurantInfo = () => {
                     onClick={() => addFoodItem(item)}
                     className=" bg-gray-900 hover:bg-gray-800 w-36 flex items-center justify-center text-white my-5 py-2"
                   >
-                    <ToastContainer />
                     Add to Cart
                     <FaCartArrowDown className="ml-2" />
                   </button>
