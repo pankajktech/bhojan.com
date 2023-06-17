@@ -14,7 +14,7 @@ const CartItems = () => {
       dispatch(clearCart());
       toast("Cart Cleared", {
         position: "top-right",
-        autoClose: 1000,
+        autoClose: 1100,
       });
     }
   };
